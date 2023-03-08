@@ -1,13 +1,12 @@
-# API 2º Semestre
-### API FATEC 2º Semestre:<br>
-Estágio do Projeto: 1ª Sprint<br>
-
 <div align="center">
-  ![Projeto](/readme/projeto.png)
-
+  <h1>API 2º Semestre</h1>
+  <h3>API FATEC 2º Semestre:</h3>
+  Estágio do Projeto: 1ª Sprint<br>
+  <br>
+  <img src="/readme/projeto.png" width="640" height="360"><br>
   <br>
 
-  # Equipe FULLSTACK<br>
+  <h1>Equipe FULLSTACK<br></h1>
   <img src="/readme/fullstack.png" width="200" height="200"><br>
   <table style="align: left">
       <thead>
@@ -19,7 +18,7 @@ Estágio do Projeto: 1ª Sprint<br>
       <tbody>
         <tr>
           <td>Pedro Cardoso</td>
-          <td><img src="/readme/pedro.png" width="100px" height="100px"></td>
+          <td><img src="/readme/pedro.png" width="75px" height="75px"></td>
           <td>Scrum Master</td>
           <td>
             <a href="https://phsc.rf.gd">Website</a><br>
@@ -29,7 +28,7 @@ Estágio do Projeto: 1ª Sprint<br>
         </tr>
         <tr>
           <td>Leonardo Gazola</td>
-          <td><img src="/readme/leo.png" width="100px" height="100px"></td>
+          <td><img src="/readme/leo.png" width="75px" height="75px"></td>
           <td>Product Owner</td>
           <td>
             <a href="https://github.com/Leonardo-Gazola-Medeiros">Github</a><br>
@@ -38,7 +37,7 @@ Estágio do Projeto: 1ª Sprint<br>
         </tr>
         <tr>
           <td>Thiago Silva</td>
-          <td><img src="/readme/thiago.png" width="100px" height="100px"></td>
+          <td><img src="/readme/thiago.png" width="75px" height="75px"></td>
           <td>Desenvolvedor</td>
           <td>
             <a href="https://github.com/thiagosilva89">Github</a><br>
@@ -47,7 +46,7 @@ Estágio do Projeto: 1ª Sprint<br>
         </tr>
         <tr>
           <td>Juliano Prado</td>
-          <td><img src="/readme/juliano.png" width="100px" height="100px"></td>
+          <td><img src="/readme/juliano.png" width="75px" height="75px"></td>
           <td>Desenvolvedor</td>
           <td>
             <a href="https://github.com/">Github</a><br>
@@ -56,7 +55,7 @@ Estágio do Projeto: 1ª Sprint<br>
         </tr>
         <tr>
           <td>Paula Regina</td>
-          <td><img src="/readme/paula.png" width="100px" height="100px"></td>
+          <td><img src="/readme/paula.png" width="75px" height="75px"></td>
           <td>Desenvolvedora</td>
           <td>
             <a href="https://github.com/">Github</a><br>
@@ -67,18 +66,28 @@ Estágio do Projeto: 1ª Sprint<br>
   </table>
   <br>
 
-  ## Escopo do Projeto<br>
+  <h1>Escopo do Projeto</h1>
   A ser definido<br>
-  ### Requisitos Funcionais:<br>
+  <h3>Requisitos Funcionais</h3>
   1. A ser definido<br>
   2. A ser definido<br>
   3. ...<br>
-  ### Requisitos Não Funcionais<br>
+  <h3>Requisitos Não Funcionais</h3>
   1. A ser definido<br>
   2. A ser definido<br>
   3. ...<br>
 
   <br>
-
+  
+  <h1>Product Backlog</h1>
+  <img src="/readme/backlog.png" width="640" height="360"><br>
+  
+  <br>
+  
+  <h1>Tecnologias</h1>
+  <img src="/readme/tecnologias.png" width="640" height="360"><br>
+  
+  <br>
+    
 </div>
 

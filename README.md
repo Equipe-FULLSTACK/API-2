@@ -79,13 +79,19 @@
 
   <br>
   
+  <h1>Tecnologias</h1>
+  <img src="/readme/tecnologias.png" width="640" height="360"><br>
+ 
+  
+  <br>
+  
   <h1>Product Backlog</h1>
   <img src="/readme/backlog.png" width="640" height="360"><br>
   
   <br>
   
-  <h1>Tecnologias</h1>
-  <img src="/readme/tecnologias.png" width="640" height="360"><br>
+  <h1>Gráfico de Burndown</h1>
+  <img src="/readme/burndown.png" width="640" height="360"><br>
   
   <br>
     

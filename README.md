@@ -67,15 +67,17 @@
   <br>
 
   <h1>Escopo do Projeto</h1>
-  A ser definido<br>
+  Um sistema para o controle de informações em sala de aula; tais informações consistem de salas, aulas, alunos e avaliações (provas, trabalhos, entre outros), exibir estatísticas das salas, aulas, alunos e avaliações, ênfase na usabilidade do sistema: rápido e intuitivo, poucos clickes, adaptar o conteúdo mostrado de início à situação e a aula e sala atual.
+  <br>
+  
   <h3>Requisitos Funcionais</h3>
-  1. A ser definido<br>
-  2. A ser definido<br>
-  3. ...<br>
+  1. Cadastro de aulas, salas, alunos e avaliações<br>
+  2. Habilidade de lançar e editar tais informações<br>
+  3. Estatisticas de tais informações<br>
   <h3>Requisitos Não Funcionais</h3>
-  1. A ser definido<br>
-  2. A ser definido<br>
-  3. ...<br>
+  1. Usabilidade simples e intuitiva com poucos clicks<br>
+  2. Adaptabilidade ao conteudo: mostrar à aula atual ao abrir o programa, etc<br>
+  3. Não ser uma planilha<br>
 
   <br>
   

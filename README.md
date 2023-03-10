@@ -67,7 +67,7 @@
   <br>
 
   <h1>Escopo do Projeto</h1>
-  Um sistema para o controle de informações em sala de aula; tais informações consistem de salas, aulas, alunos e avaliações (provas, trabalhos, entre outros), exibir estatísticas das salas, aulas, alunos e avaliações, ênfase na usabilidade do sistema: rápido e intuitivo, poucos clickes, adaptar o conteúdo mostrado de início à situação e a aula e sala atual.
+  Um sistema para o controle de informações em sala de aula; tais informações consistem de salas, aulas, alunos e avaliações (provas, trabalhos, entre outros), exibir estatísticas de tais sistemas, ênfase na usabilidade do sistema: rápido e intuitivo, poucos clickes, adaptar o conteúdo mostrado de início à situação e a aula e sala atual.
   <br>
   
   <h3>Requisitos Funcionais</h3>

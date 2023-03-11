@@ -32,7 +32,7 @@
           <td>Product Owner</td>
           <td>
             <a href="https://github.com/Leonardo-Gazola-Medeiros">Github</a><br>
-            <a href="https://linkedin.com/in/leonardo-gazola-685a991b3/">Linkedin</a>
+            <a href="https://linkedin.com/in/leonardo-gazola/">Linkedin</a>
           </td>
         </tr>
         <tr>

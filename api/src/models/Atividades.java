@@ -8,7 +8,7 @@ public abstract class Atividades {
     private String titulo;
     private Boolean concluido;
     private Date data_entrega;
-    private Set<Alunos> alunosPropostos = new LinkedHashSet<>();
+    Set<Alunos> alunosPropostos = new LinkedHashSet<>();
 
 
     public String getTitulo() {

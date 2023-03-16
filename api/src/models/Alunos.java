@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Alunos {
 
-    String nome;
+    private String nome;
     Set<Disciplina> disciplinasInscritas = new LinkedHashSet<>();
     Set<Atividades> atividadesPropostas = new LinkedHashSet<>();
 

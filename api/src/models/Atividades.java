@@ -7,6 +7,7 @@ public abstract class Atividades {
 
     String titulo;
     Boolean concluido;
+    Date data_entrega;
     Set<Alunos> alunosPropostos = new LinkedHashSet<>();
 
 

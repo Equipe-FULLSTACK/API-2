@@ -93,7 +93,7 @@
   <br>
   
   <h1>Gráfico de Burndown</h1>
-  <img src="/readme/burndown.png" width="640" height="360"><br>
+  <img src="/readme/Grafico_Burndown_Sprint1.png" width="640" height="360"><br>
   
   <br>
     

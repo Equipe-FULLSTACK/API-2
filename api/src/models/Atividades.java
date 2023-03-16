@@ -5,10 +5,10 @@ import java.util.Set;
 
 public abstract class Atividades {
 
-    String titulo;
-    Boolean concluido;
-    Date data_entrega;
-    Set<Alunos> alunosPropostos = new LinkedHashSet<>();
+    private String titulo;
+    private Boolean concluido;
+    private Date data_entrega;
+    private Set<Alunos> alunosPropostos = new LinkedHashSet<>();
 
 
     public String getTitulo() {

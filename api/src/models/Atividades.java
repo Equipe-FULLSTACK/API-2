@@ -28,7 +28,12 @@ public abstract class Atividades {
     }
     public void setAlunosPropostos(Set<Alunos> alunosPropostos) {
         this.alunosPropostos = alunosPropostos;
+    }  
+     public String getData_entrega() {
+        return data_entrega;
     }
+    public void setData_entrega(String data_entrega) {
+        this.data_entrega = data_entrega;
 
     
 }

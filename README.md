@@ -19,7 +19,7 @@
         <tr>
           <td>Pedro Cardoso</td>
           <td><img src="/readme/pedro.png" width="75px" height="75px"></td>
-          <td>Scrum Master</td>
+          <td>Product Owner</td>
           <td>
             <a href="https://phsc.rf.gd">Website</a><br>
             <a href="https://github.com/PhscZ">Github</a><br>
@@ -29,7 +29,7 @@
         <tr>
           <td>Leonardo Gazola</td>
           <td><img src="/readme/leo.png" width="75px" height="75px"></td>
-          <td>Product Owner</td>
+          <td>Scrum Master</td>
           <td>
             <a href="https://github.com/Leonardo-Gazola-Medeiros">Github</a><br>
             <a href="https://linkedin.com/in/leonardo-gazola/">Linkedin</a>

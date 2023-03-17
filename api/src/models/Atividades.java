@@ -1,6 +1,6 @@
 package models;
-
-import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.LinkedList;
 import java.util.Set;
 
 public abstract class Atividades {
@@ -8,7 +8,7 @@ public abstract class Atividades {
     private String titulo;
     private Boolean concluido;
     private Date data_entrega;
-    Set<Alunos> alunosPropostos = new LinkedHashSet<>();
+    Set<Alunos> alunosPropostos = new LinkedList<>();
 
 
     public String getTitulo() {

@@ -1,13 +1,14 @@
 package models;
 
-import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.LinkedList;
 import java.util.Set;
 
 public class Alunos {
 
     private String nome;
-    Set<Disciplina> disciplinasInscritas = new LinkedHashSet<>();
-    Set<Atividades> atividadesPropostas = new LinkedHashSet<>();
+    Set<Disciplina> disciplinasInscritas = new LinkedList<>();
+    Set<Atividades> atividadesPropostas = new LinkedList<>();
 
 
     public void inscreverDisciplina(Disciplina disciplina){

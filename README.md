@@ -53,15 +53,6 @@
             <a href="https://linkedin.com/in/">Linkedin</a>
           </td>
         </tr>
-        <tr>
-          <td>Paula Regina</td>
-          <td><img src="/readme/paula.png" width="75px" height="75px"></td>
-          <td>Desenvolvedora</td>
-          <td>
-            <a href="harima-paula">Github</a><br>
-            <a href="https://linkedin.com/in/paula-morais-466571269">Linkedin</a>
-          </td>
-        </tr>
     </tbody>
   </table>
   <br>

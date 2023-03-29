@@ -73,12 +73,14 @@
   <br>
   
   <h1>Tecnologias</h1>
+  
   <img src="/readme/tecnologias.png" width="640" height="360"><br>
  
   
   <br>
   
   <h1>Product Backlog</h1>
+  
   <img src="/readme/backlog.png" width="640" height="360"><br>
   
   <br>
@@ -88,5 +90,22 @@
   
   <br>
     
+  <h1>Diagrama Entidade Relacionamento</h1>
+  
+  <img src="/readme/Diagrama-DER.png" width="640" height="360"><br>
+  
+  <br>
+  
+  <h1>Diagrama UML</h1>
+  
+  <img src="/readme/Diagrama-UML.png" width="640" height="360"><br>
+  
+  <br>
+  
+  <h1>Diagrama Tabelas Banco de Dados</h1>
+  
+  <img src="/readme/Diagrama-Classes.png" width="640" height="360"><br>
+  
+  <br>
 </div>
 

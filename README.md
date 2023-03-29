@@ -81,7 +81,7 @@
   
   <h1>Product Backlog</h1>
   
-  <img src="/readme/backlog.png" width="640" height="360"><br>
+  <img src="/readme/Backlog_Produto.png" width="640" height="360"><br>
   
   <br>
   

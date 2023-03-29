@@ -92,19 +92,19 @@
     
   <h1>Diagrama Entidade Relacionamento</h1>
   
-  <img src="/readme/Diagrama-DER.png" width="640" height="360"><br>
+  <img src="/readme/Diagrama-DER.png" width="610" height="720"><br>
   
   <br>
   
   <h1>Diagrama UML</h1>
   
-  <img src="/readme/Diagrama-UML.png" width="640" height="360"><br>
+  <img src="/readme/Diagrama-UML.png" width="520" height="600"><br>
   
   <br>
   
   <h1>Diagrama Tabelas Banco de Dados</h1>
   
-  <img src="/readme/Diagrama-Classes.png" width="640" height="360"><br>
+  <img src="/readme/Diagrama-Classes.png" width="800" height="500"><br>
   
   <br>
 </div>

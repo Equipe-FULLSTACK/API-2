@@ -28,7 +28,7 @@
         </tr>
         <tr>
           <td>Leonardo Gazola</td>
-          <td><img src="/readme/leo.png" width="75px" height="75px"></td>
+          <td><img src="/readme/leo.jpg" width="75px" height="75px"></td>
           <td>Scrum Master</td>
           <td>
             <a href="https://github.com/Leonardo-Gazola-Medeiros">Github</a><br>

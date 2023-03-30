@@ -71,13 +71,14 @@ public class Menu {
 	static JLabel lbl_fim_aula = new JLabel("", SwingConstants.RIGHT);
 	
 	//labels
-	static JLabel lbl_tarefas_aula = new JLabel("Tarefas da Aula", SwingConstants.CENTER);
-	static JLabel lbl_alunos = new JLabel("Alunos", SwingConstants.CENTER);
-	static JLabel lbl_entregas = new JLabel("Tarefas", SwingConstants.CENTER);
-	static JLabel lbl_notas = new JLabel("Notas", SwingConstants.CENTER);
+	static JLabel lbl_tarefas_aula = new JLabel("Tarefas do Dia", SwingConstants.CENTER);
+	static JLabel lbl_alunos = new JLabel("Aluno", SwingConstants.CENTER);
+	static JLabel lbl_entregas = new JLabel("Entrega", SwingConstants.CENTER);
+	static JLabel lbl_notas = new JLabel("Nota", SwingConstants.CENTER);
 	static JLabel lbl_comentarios = new JLabel("Comentarios", SwingConstants.CENTER);
 	static JLabel lbl_aulas_dia = new JLabel("Aulas do dia", SwingConstants.CENTER);
 	static JLabel lbl_horario = new JLabel("Horario", SwingConstants.CENTER);
+	static JLabel lbl_dia_semana = new JLabel("Quinta-feira", SwingConstants.CENTER);
 	
 	//textfields, comboboxes
 	static String[] comboAtualizarEntrega = {"", "Entregue", "Nao Entregue"}; static JComboBox<String> combo_atualizar_entrega = new JComboBox<>(comboAtualizarEntrega);
@@ -229,6 +230,7 @@ public class Menu {
 	static JButton btn_remover_tarefa2 = new JButton("Remover");
 	static JButton btn_adicionar_aluno2 = new JButton("Adicionar");
 	static JButton btn_remover_aluno2 = new JButton("Remover");
+	static JButton btn_carregar2 = new JButton("Carregar");
 	
 	
 	//OPCOES
@@ -350,7 +352,7 @@ public class Menu {
 		
 		header.definirEventos(inicio, aulastarefas, estatisticas, opcoes);
 		inicio.definirEventos();
-		//aulastarefas.definirEventos();
+		aulastarefas.definirEventos();
 		//estatisticas.definirEventos();
 		opcoes.definirEventos();
 		
@@ -399,6 +401,8 @@ public class Menu {
 				}
 			}
 		}
+		lbl_dia_semana.setText(LocalDateTime.now().format(diaFormato));
+		lbl_dia2.setText(LocalDateTime.now().format(diaFormato));
 		
 		Timer temporizador = new Timer();
 		temporizador.schedule(new AtualizaTempo(), 0, 1000);

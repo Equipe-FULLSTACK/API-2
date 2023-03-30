@@ -1,4 +1,10 @@
 import java.awt.event.*;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeEvent;
+
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
 import java.awt.Color;
 
 public class AulasTarefas {
@@ -46,7 +52,8 @@ public class AulasTarefas {
 		Menu.definirBtn (Menu.btn_remover_tarefa2,   Menu.pct(width, 62), Menu.pct(height, 84), Menu.pct(width, 11), Menu.pct(height,  6), Menu.fonteBtnTopo);
 		
 		Menu.definirLbl (Menu.lbl_alunos2,          Menu.pct(width, 74), Menu.pct(height,  9), Menu.pct(width, 22), Menu.pct(height,  8), Menu.fonteBtnTopo);
-		Menu.definirList(Menu.panel_list_alunos2,   Menu.pct(width, 74), Menu.pct(height, 16), Menu.pct(width, 22), Menu.pct(height, 61), Menu.fonteLista, Menu.scroll_list_alunos2, Menu.list_alunos2);
+		Menu.definirBtn (Menu.btn_carregar2,        Menu.pct(width, 74), Menu.pct(height, 16), Menu.pct(width, 22), Menu.pct(height,  6), Menu.fonteBtnTopo);
+		Menu.definirList(Menu.panel_list_alunos2,   Menu.pct(width, 74), Menu.pct(height, 22), Menu.pct(width, 22), Menu.pct(height, 55), Menu.fonteLista, Menu.scroll_list_alunos2, Menu.list_alunos2);
 		Menu.definirTxt (Menu.txt_alunos2,          Menu.pct(width, 74), Menu.pct(height, 77), Menu.pct(width, 22), Menu.pct(height,  5), Menu.fonteLista);
 		Menu.definirBtn (Menu.btn_adicionar_aluno2, Menu.pct(width, 74), Menu.pct(height, 84), Menu.pct(width, 11), Menu.pct(height,  6), Menu.fonteBtnTopo);
 		Menu.definirBtn (Menu.btn_remover_aluno2,   Menu.pct(width, 85), Menu.pct(height, 84), Menu.pct(width, 11), Menu.pct(height,  6), Menu.fonteBtnTopo);
@@ -98,7 +105,76 @@ public class AulasTarefas {
 		Menu.txt_alunos2.setVisible(status);
 		Menu.btn_adicionar_aluno2.setVisible(status);
 		Menu.btn_remover_aluno2.setVisible(status);
+		Menu.btn_carregar2.setVisible(status);
 		
 		Menu.panel_divisao.setVisible(status);
+	}
+	
+	static void definirEventos() {
+		//btn_adicionar_aula1
+		Menu.btn_adicionar_aula1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Adicionando aula");
+			}
+		});
+		//btn_remover_aula1
+		Menu.btn_remover_aula1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Removendo aula");
+			}
+		});
+		
+		//btn_adicionar_aluno1
+		Menu.btn_adicionar_aluno1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Adicionando aluno 1");
+			}
+		});
+		//btn_remover_aluno1
+		Menu.btn_remover_aluno1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Removendo aluno 1");
+			}
+		});
+		
+		
+		//btn_adicionar_tarefa2
+		Menu.btn_adicionar_tarefa2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Adicionando tarefa");
+			}
+		});
+		//btn_remover_tarefa2
+		Menu.btn_remover_tarefa2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Removendo tarefa");
+			}
+		});
+		
+		//btn_adicionar_aluno2
+		Menu.btn_adicionar_aluno2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Adicionando aluno 2");
+			}
+		});
+		//btn_remover_aluno2
+		Menu.btn_remover_aluno2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Removendo aluno 2");
+			}
+		});
+		
+		//btn_carregar2
+		Menu.btn_carregar2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Carregando alunos");
+			}
+		});
+		
+		Menu.datepicker_tarefa.getDateEditor().addPropertyChangeListener(new PropertyChangeListener() { public void propertyChange(PropertyChangeEvent e) {
+			if ("date".equals(e.getPropertyName())) {
+				Menu.lbl_dia2.setText(new SimpleDateFormat("EEEE").format((Date) e.getNewValue()));
+            }
+		}});
 	}
 }

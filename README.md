@@ -98,7 +98,7 @@
   
   <h1>Diagrama UML</h1>
   
-  <img src="/readme/Diagrama-UML.png" width="520" height="600"><br>
+  <img src="/readme/Diagrama-UML2.png" width="520" height="600"><br>
   
   <br>
   

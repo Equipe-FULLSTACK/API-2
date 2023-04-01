@@ -171,7 +171,7 @@ Equipe FULLSTACK - API 2º Semestre
   ### <p align="center">Gráfico de Burndown
     
   <p align="center">
-  <img src="/readme/Grafico_Burndown_Sprint1.png" width="640" height="360"><br>
+  <img src="/readme/Grafico_Burndown.png" width="640" height="360"><br>
   
     
   # <p align="center">Diagrama Entidade Relacionamento

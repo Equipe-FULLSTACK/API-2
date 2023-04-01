@@ -74,7 +74,7 @@
   
   <h1>Tecnologias</h1>
   
-  <img src="/readme/tecnologias.png" width="640" height="360"><br>
+  <img src="/readme/Tecnologias_Usadas.png" width="640" height="360"><br>
  
   
   <br>

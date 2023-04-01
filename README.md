@@ -154,29 +154,6 @@ Equipe FULLSTACK - API 2º Semestre
   
   <br>
   
-  ### <p align = "center">Ao final da Sprint, não foi possível a entrega das seguintes propostas:
-  
-  - Implementação para remoção de alunos antigos das aulas
-  - Implementação das funções para remoção de aulas em sí
-  - Implementação para funçoes de inserção ou remoção de novas atividades
-  - Desenvolvimento de funções para atribuição de atividades aos os estudantes, com possibilidade de escolha
-  - Implementação do banco de dados
-  
-  <br>
-  
-  Por conta de adversidades ocorrentes ao longo da Sprint, encontraram-se problemas que levaram a remodelações imprevistas no projeto, 
-  de forma que levou a atrasos no cronograma inicial esperado. Levando a entrega dos itens não concluídos na
-  primeira Sprint para a segunda Sprint.
-  
-  Em consequência disto, o gráfico de burndown apresentado abaixo encontra-se fora de prazo:
-  
-  
-  ### <p align="center">Gráfico de Burndown
-    
-  <p align="center">
-  <img src="/readme/Grafico_Burndown.png" width="640" height="360"><br>
-  
-  <br>
   <br>
   
   Ao longo desta Sprint, foi planejada como seria a estrutura final da funcionalidade da aplicação,
@@ -217,4 +194,33 @@ Equipe FULLSTACK - API 2º Semestre
   <p align="center">
   <img src="/readme/Diagrama-Classes.png" width="610" height="500"><br>
   
+  <br>
+  <br>
+    
+    
+  ### <p align = "center">Ao final da Sprint, não foi possível a entrega das seguintes propostas
+  <br>
+  
+  - Implementação para remoção de alunos antigos das aulas
+  - Implementação das funções para remoção de aulas em sí
+  - Implementação para funçoes de inserção ou remoção de novas atividades
+  - Desenvolvimento de funções para atribuição de atividades aos os estudantes, com possibilidade de escolha
+  - Implementação do banco de dados
+    
+   <br>
+    
+  Por conta de adversidades ocorrentes ao longo da Sprint, encontraram-se problemas que levaram a remodelações imprevistas no projeto, 
+  de forma que levou a atrasos no cronograma inicial esperado. Levando a entrega dos itens não concluídos na
+  primeira Sprint para a segunda Sprint.
+  
+  Em consequência disto, o gráfico de burndown apresentado abaixo encontra-se fora de prazo:
+  
+  
+  ### <p align="center">Gráfico de Burndown
+    
+  <p align="center">
+  <img src="/readme/Grafico_Burndown.png" width="640" height="360"><br>
+  
+  <br>
+  <br>
 

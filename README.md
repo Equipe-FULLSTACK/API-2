@@ -1,5 +1,3 @@
-> Status: Developing
-
 
 Equipe FULLSTACK - API 2º Semestre
 ==================================

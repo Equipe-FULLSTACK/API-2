@@ -1,12 +1,21 @@
 <div align="center">
-  <h1>API 2º Semestre</h1>
-  <h3>API FATEC 2º Semestre:</h3>
-  Estágio do Projeto: 1ª Sprint<br>
+  <h1>Equipe FULLSTACK - API 2º Semestre</h1>
+  <h3>Projeto API 2º Semestre:</h3>
+  <h3>FATEC São José dos Campos - Prof. Jessen Vidal</h3>
+  <br>
+  <br>
+  <br>
+  <h4>Estágio do Projeto: Em andamento</h4>
+  <br>
+  <img src="/readme/projeto.png" width="640" height="360"><br>
+  <br>
+  
+  Estágio do Projeto 1º Sprint:<br>
   <br>
   <img src="/readme/projeto.png" width="640" height="360"><br>
   <br>
 
-  <h1>Equipe FULLSTACK<br></h1>
+  <h1>Equipe-FULLSTACK<br></h1>
   <img src="/readme/fullstack.png" width="200" height="200"><br>
   <table style="align: left">
       <thead>
@@ -58,7 +67,10 @@
   <br>
 
   <h1>Escopo do Projeto</h1>
-  Um sistema para o controle de informações em sala de aula; tais informações consistem de salas, aulas, alunos e avaliações (provas, trabalhos, entre outros), exibir estatísticas de tais sistemas, ênfase na usabilidade do sistema: rápido e intuitivo, poucos clickes, adaptar o conteúdo mostrado de início à situação e a aula e sala atual.
+  Um sistema para o controle de informações em sala de aula; tais informações
+  consistem de salas, aulas, alunos e avaliações (provas, trabalhos, entre outros),
+  exibir estatísticas de tais sistemas, ênfase na usabilidade do sistema: rápido e intuitivo,
+  poucos clickes, adaptar o conteúdo mostrado de início à situação e a aula e sala atual.
   <br>
   
   <h3>Requisitos Funcionais</h3>

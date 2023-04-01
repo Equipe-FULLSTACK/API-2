@@ -12,16 +12,17 @@ Equipe FULLSTACK - API 2º Semestre
 
   #### <div align="center"> Estado Atual do Projeto: Em andamento </div>
   
-  ![Estado_Atual](/readme/API_Recente "Estado Atual do Projeto")
+  <div align="center"> <img src="/readme/API_Recente.png "width="640" height="360"> </div>
   
-  ### <div align="center"> Estado Final do Projeto 1º Sprint: 
+  ### <div align="center"> Estado Final do Projeto 1º Sprint: </div>
 
- <img src="/readme/projeto.png" width="640" height="360"> </div>
+ <div align = "center"><img src="/readme/projeto.png" width="640" height="360"> </div>
 
 
   ### <div align="center">Equipe-FULLSTACK </div>
  <div align="center"> <img src="/readme/fullstack.png" width="200" height="200"> </div>
   
+  <div align="center">
   <table style="align: center">
       <thead>
         <th>Nome</th>
@@ -70,63 +71,74 @@ Equipe FULLSTACK - API 2º Semestre
     </tbody>
   </table>
   <br>
+  </div>
 
   # <div align="center"> Escopo do Projeto </div>
   
-  <div align="center"> O projeto se baseia em um sistema para o controle de informações em sala de aula, onde, o professor cliente deseja armazenar informações acerca do desempenho geral das turmas nas quais ministra aulas. Assim como informar o professor sobre as próximas atividades imediatas a ocorrer, e quais alunos ainda não as entregaram.</div>
+  <p align="center"> O projeto se baseia em um sistema para o controle de informações em sala de aula, onde, o professor cliente deseja armazenar informações acerca do desempenho geral das turmas nas quais ministra aulas. Assim como informar o professor sobre as próximas atividades imediatas a ocorrer, e quais alunos ainda não as entregaram.
 
-  <div align="center"> Para isso, a aplicação em desenvolvimento necessita ser capaz de: recolher informações sobre aulas, salas, alunos e avaliações( provas, trabalhos, entre outros ). Além de ser capaz de abstrair estas informções coletadas em forma de gráficos de estatísticas que informem o desempenho das turmas. Tudo isto, por meio de uma aplicação simples e  intuitiva, na qual sejam necessários poucos cliques para se obter as informações necessárias para o usuário que utilizará o aplicativo. </div> 
+  <p align="center">
+Para isso, a aplicação em desenvolvimento necessita ser capaz de: recolher informações sobre aulas, salas, alunos e avaliações( provas, trabalhos, entre outros ). Além de ser capaz de abstrair estas informções coletadas em forma de gráficos de estatísticas que informem o desempenho das turmas. Tudo isto, por meio de uma aplicação simples e  intuitiva, na qual sejam necessários poucos cliques para se obter as informações necessárias para o usuário que utilizará o aplicativo. 
+    
+  #
   
-  # Requisitos do Projeto
+  # <p align="center">Requisitos do Projeto</p>
   
-  ### <div align="center">Requisitos Funcionais</div>
-  - <div align="center">Cadastro de aulas, salas, alunos e avaliações </div>
-  - <div align="center">Habilidade de lançar e editar tais informações</div>
-  - <div align="center">Estatisticas de tais informações</div>
-  ### <div align="center">Requisitos Não Funcionais</div>
-  - Usabilidade simples e intuitiva com poucos cliques
-  - Adaptabilidade ao conteudo: mostrar à aula atual ao abrir o programa, etc
-  - Não ser uma planilha
+  ## <p align="center">Requisitos Funcionais
+  <p align="center">- Cadastro de aulas, salas, alunos e avaliações 
+  <p align="center">- Habilidade de lançar e editar tais informações
+  <p align="center">- Estatisticas de tais informações
+    
+  #  
+
+    
+  ## <p align="center">Requisitos Não Funcionais
+    
+   <p align="center">- Usabilidade simples e intuitiva com poucos cliques
+   <p align="center">- Adaptabilidade ao conteudo: mostrar à aula atual ao abrir o programa, etc
+   <p align="center">- Não ser uma planilha
+     
+  #
+
+     
+  # <p align="center">Cronograma do Projeto
   
-  
-  <h1>Cronograma do Projeto</h1>
-  
+  <p align="center">
   <img src="/readme/Cronograma_Sprints.png" width="640" height="360"><br>
   
   
-  <h1>Tecnologias Utilizadas</h1>
+  # <p align="center">Tecnologias Utilizadas
   
+  <p align="center">
   <img src="/readme/Tecnologias_Usadas1.png" width="640" height="360"><br>
- 
   
-  <br>
   
-  <h1>Product Backlog</h1>
+  # <p align="center">Product Backlog
   
+  <p align="center">
   <img src="/readme/Backlog_Produto.png" width="640" height="360"><br>
   
-  <br>
   
-  <h1>Gráfico de Burndown</h1>
+  # <p align="center">Gráfico de Burndown
+    
+  <p align="center">
   <img src="/readme/Grafico_Burndown_Sprint1.png" width="640" height="360"><br>
   
-  <br>
     
-  <h1>Diagrama Entidade Relacionamento</h1>
+  # <p align="center">Diagrama Entidade Relacionamento
   
+  <p align="center">
   <img src="/readme/Diagrama-DER.png" width="610" height="720"><br>
   
-  <br>
-  
-  <h1>Diagrama UML</h1>
-  
+
+  # <p align="center">Diagrama UML
+    
+  <p align="center">
   <img src="/readme/Diagrama-UML2.png" width="520" height="600"><br>
+
+  # <p align="center">Diagrama Tabelas Banco de Dados
   
-  <br>
-  
-  <h1>Diagrama Tabelas Banco de Dados</h1>
-  
+  <p align="center">
   <img src="/readme/Diagrama-Classes.png" width="800" height="500"><br>
   
-  <br>
 

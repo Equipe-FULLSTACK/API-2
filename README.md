@@ -165,7 +165,8 @@ Equipe FULLSTACK - API 2º Semestre
   <br>
   
   Por conta de adversidades ocorrentes ao longo da Sprint, encontraram-se problemas que levaram a remodelações imprevistas no projeto, 
-  de forma que levou a atrasos no cronograma inicial esperado.
+  de forma que levou a atrasos no cronograma inicial esperado. Levando a entrega dos itens não concluídos na
+  primeira Sprint para a segunda Sprint.
   
   Em consequência disto, o gráfico de burndown apresentado abaixo encontra-se fora de prazo:
   
@@ -175,6 +176,8 @@ Equipe FULLSTACK - API 2º Semestre
   <p align="center">
   <img src="/readme/Grafico_Burndown.png" width="640" height="360"><br>
   
+  <br>
+  <br>
   
   Ao longo desta Sprint, foi planejada como seria a estrutura final da funcionalidade da aplicação,
   onde, por consenso da equipe, foi definida a estrutura por meio de que a aplicação operaria. Determinando
@@ -182,17 +185,32 @@ Equipe FULLSTACK - API 2º Semestre
     
   Disto, foram feitos diferentes diagramas para representar as estruturas do sistema.
   
+  Inicialmente montou-se um modelo conceitual da estrutura de dados, informando sobre todas as entidades que
+  participariam da infraestrutura do banco de dados, e quais atributos cada uma possuiria.
     
   ### <p align="center">Diagrama Entidade Relacionamento
   
   <p align="center">
   <img src="/readme/Diagrama-DER.png" width="610" height="400"><br>
   
-
+  <br>
+  <br>
+    
+  Foi feito também um diagrama pelos padrões UML (Unified Modelling Language), um padrão comumente usado
+  para a elaboração de estruturas de projetos de software
+    
   ### <p align="center">Diagrama UML
     
   <p align="center">
   <img src="/readme/Diagrama-UML2.png" width="520" height="600"><br>
+    
+  <br>
+  <br>
+    
+  Por fim, foi gerado um modelo da estrutura final das tabelas do banco de dados no
+  projeto. O qual então foi usado para a criação de fato do banco de dados a ser utilizado
+  pela aplicação.
+    
 
   ### <p align="center">Diagrama Tabelas Banco de Dados
   

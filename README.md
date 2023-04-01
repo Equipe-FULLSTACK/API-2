@@ -75,10 +75,13 @@ Equipe FULLSTACK - API 2º Semestre
 
   # <div align="center"> Escopo do Projeto </div>
   
-  <p align="center"> O projeto se baseia em um sistema para o controle de informações em sala de aula, onde, o professor cliente deseja armazenar informações acerca do desempenho geral das turmas nas quais ministra aulas. Assim como informar o professor sobre as próximas atividades imediatas a ocorrer, e quais alunos ainda não as entregaram.
+  <p align="center"> O projeto se baseia em um sistema para o controle de informações em sala de aula, onde, 
+  o professor cliente deseja armazenar informações acerca do desempenho geral das turmas nas quais ministra aulas. 
+  Assim como informar o professor sobre as próximas atividades imediatas a ocorrer, e quais alunos ainda não as entregaram.
 
   <p align="center">
-Para isso, a aplicação em desenvolvimento necessita ser capaz de: recolher informações sobre aulas, salas, alunos e avaliações( provas, trabalhos, entre outros ). Além de ser capaz de abstrair estas informções coletadas em forma de gráficos de estatísticas que informem o desempenho das turmas. Tudo isto, por meio de uma aplicação simples e  intuitiva, na qual sejam necessários poucos cliques para se obter as informações necessárias para o usuário que utilizará o aplicativo. 
+  Para isso, a aplicação em desenvolvimento necessita ser capaz de: recolher informações sobre aulas, salas, alunos e avaliações( provas, trabalhos, entre outros ).
+  Além de ser capaz de abstrair estas informções coletadas em forma de gráficos de estatísticas que informem o desempenho das turmas. Tudo isto, por meio de uma         aplicação simples e  intuitiva, na qual sejam necessários poucos cliques para se obter as informações necessárias para o usuário que utilizará o aplicativo. </p>
     
   #
   

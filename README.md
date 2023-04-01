@@ -12,10 +12,6 @@ Equipe FULLSTACK - API 2º Semestre
   
   <div align="center"> <img src="/readme/API_Recente.png "width="640" height="360"> </div>
   
-  ### <div align="center"> Estado Final do Projeto 1º Sprint: </div>
-
- <div align = "center"><img src="/readme/projeto.png" width="640" height="360"> </div>
-
   #
 
   ### <div align="center">Equipe-FULLSTACK </div>
@@ -127,6 +123,12 @@ Equipe FULLSTACK - API 2º Semestre
   Primeira Sprint - 02/04/2023
   ============================
   ****************************
+    
+    
+  ### <div align="center"> Estado Final do Projeto 1º Sprint: </div>
+
+  <div align = "center"><img src="/readme/projeto.png" width="640" height="360"> </div>
+
 
 
   
@@ -173,21 +175,28 @@ Equipe FULLSTACK - API 2º Semestre
   <p align="center">
   <img src="/readme/Grafico_Burndown.png" width="640" height="360"><br>
   
+  
+  Ao longo desta Sprint, foi planejada como seria a estrutura final da funcionalidade da aplicação,
+  onde, por consenso da equipe, foi definida a estrutura por meio de que a aplicação operaria. Determinando
+  como seria a estrutura de dados entre as classes do sistema, e, quais funções a serem realizadas por estas.
     
-  # <p align="center">Diagrama Entidade Relacionamento
+  Disto, foram feitos diferentes diagramas para representar as estruturas do sistema.
+  
+    
+  ### <p align="center">Diagrama Entidade Relacionamento
   
   <p align="center">
-  <img src="/readme/Diagrama-DER.png" width="610" height="720"><br>
+  <img src="/readme/Diagrama-DER.png" width="610" height="400"><br>
   
 
-  # <p align="center">Diagrama UML
+  ### <p align="center">Diagrama UML
     
   <p align="center">
   <img src="/readme/Diagrama-UML2.png" width="520" height="600"><br>
 
-  # <p align="center">Diagrama Tabelas Banco de Dados
+  ### <p align="center">Diagrama Tabelas Banco de Dados
   
   <p align="center">
-  <img src="/readme/Diagrama-Classes.png" width="800" height="500"><br>
+  <img src="/readme/Diagrama-Classes.png" width="610" height="500"><br>
   
 

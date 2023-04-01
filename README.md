@@ -120,9 +120,55 @@ Equipe FULLSTACK - API 2º Semestre
   
   <p align="center">
   <img src="/readme/Backlog_Produto.png" width="640" height="360"><br>
+  <br>
+  <br>
   
   
-  # <p align="center">Gráfico de Burndown
+  Primeira Sprint - 02/04/2023
+  ============================
+  ****************************
+
+
+  
+  ### <p align = "center">Durante o percurso da primeira Sprint, foram entregues as seguintes propostas:
+  
+  <br>
+
+
+  - Criação da GUI
+  - Desenvolvimento da Interface da Tela principal
+  - Implementação de botões de acesso as abas de: atividades, estatisticas, alunos e aulas
+  - Desenvolvimento do layout da tela de alunos
+  - Implementação para funçoes de inserção ou remoção de novos alunos
+  - Criação dos códigos em java para a classe alunos
+  - Desenvolvimento do layout da tela de aulas
+  - Implementação para funçoes de remoção e cadastro de alunos em aulas
+  - Criação dos códigos em java para a classe aulas
+  - Implementação do layout para cadastrar novas aulas
+  - Desenvolvimento do layout da tela de atividades
+  - Criação dos códigos em java para a classe atividades
+  - Modelagem do banco de dados
+  - Desenvolvimento da aplicação de Integração com banco de dados
+  
+  <br>
+  
+  ### <p align = "center">Ao final da Sprint, não foi possível a entrega das seguintes propostas:
+  
+  - Implementação para remoção de alunos antigos das aulas
+  - Implementação das funções para remoção de aulas em sí
+  - Implementação para funçoes de inserção ou remoção de novas atividades
+  - Desenvolvimento de funções para atribuição de atividades aos os estudantes, com possibilidade de escolha
+  - Implementação do banco de dados
+  
+  <br>
+  
+  Por conta de adversidades ocorrentes ao longo da Sprint, encontraram-se problemas que levaram a remodelações imprevistas no projeto, 
+  de forma que levou a atrasos no cronograma inicial esperado.
+  
+  Em consequência disto, o gráfico de burndown apresentado abaixo encontra-se fora de prazo:
+  
+  
+  ### <p align="center">Gráfico de Burndown
     
   <p align="center">
   <img src="/readme/Grafico_Burndown_Sprint1.png" width="640" height="360"><br>

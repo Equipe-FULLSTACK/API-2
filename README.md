@@ -106,7 +106,7 @@
   <img src="/readme/Cronograma_Sprints.png" width="640" height="360"><br>
   
   
-  <h1>Tecnologias</h1>
+  <h1>Tecnologias Utilizadas</h1>
   
   <img src="/readme/Tecnologias_Usadas1.png" width="640" height="360"><br>
  

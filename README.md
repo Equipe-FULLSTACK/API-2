@@ -1,24 +1,28 @@
-<div align="center">
-  <h1>Equipe FULLSTACK - API 2º Semestre</h1>
-  <h3>Projeto API 2º Semestre:</h3>
-  <h3>FATEC São José dos Campos - Prof. Jessen Vidal</h3>
-  <br>
-  <br>
-  <br>
-  <h4>Estado Atual do Projeto: Em andamento</h4>
-  <br>
-  <img src="/readme/projeto.png" width="640" height="360"><br>
-  <br>
-  
-  Estado Final do Projeto 1º Sprint:<br>
-  <br>
-  <img src="/readme/projeto.png" width="640" height="360"><br>
-  <br>
+> Status: Developing
 
-  <h1>Equipe-FULLSTACK<br></h1>
-  <img src="/readme/fullstack.png" width="200" height="200"><br>
-  <br>
-  <table style="align: left">
+
+Equipe FULLSTACK - API 2º Semestre
+==================================
+**********************************
+
+###  <div align="center"> Projeto API 2º Semestre: </div>
+  ### <div align="center"> FATEC São José dos Campos - Prof. Jessen Vidal </div>
+
+
+
+  #### <div align="center"> Estado Atual do Projeto: Em andamento </div>
+  
+  ![Estado_Atual](/readme/API_Recente "Estado Atual do Projeto")
+  
+  ### <div align="center"> Estado Final do Projeto 1º Sprint: 
+
+ <img src="/readme/projeto.png" width="640" height="360"> </div>
+
+
+  ### <div align="center">Equipe-FULLSTACK </div>
+ <div align="center"> <img src="/readme/fullstack.png" width="200" height="200"> </div>
+  
+  <table style="align: center">
       <thead>
         <th>Nome</th>
         <th>Foto</th>
@@ -67,40 +71,24 @@
   </table>
   <br>
 
-  <h1>Escopo do Projeto</h1>
-  O projeto se baseia em um sistema para o controle de informações em sala de aula, onde,
-  o professor cliente deseja armazenar informações acerca do desempenho geral das turmas 
-  nas quais ministra aulas. Assim como informar o professor sobre as próximas atividades
-  imediatas a ocorrer, e quais alunos ainda não as entregaram.
-  <br>
-  <br>
-  Para isso, a aplicação em desenvolvimento necessita ser capaz de: recolher informações
-  sobre aulas, salas, alunos e avaliações( provas, trabalhos, entre outros ). Além de 
-  ser capaz de abstrair estas informções coletadas em forma de gráficos de estatísticas 
-  que informem o desempenho das turmas. Tudo isto, por meio de uma aplicação simples e 
-  intuitiva, na qual sejam necessários poucos cliques para se obter as informações necessárias 
-  para o usuário que utilizará o aplicativo.
-  <br>
-  <br>
-  <br>
-  <br>
-  <h1>Requisitos do Projeto</h1>
-  <br>
-  <h3>Requisitos Funcionais</h3>
-  1. Cadastro de aulas, salas, alunos e avaliações
-  <br>
-  2. Habilidade de lançar e editar tais informações
-  <br>
-  3. Estatisticas de tais informações
-  <br>
-  <h3>Requisitos Não Funcionais</h3>
-  1. Usabilidade simples e intuitiva com poucos cliques
-  <br>
-  2. Adaptabilidade ao conteudo: mostrar à aula atual ao abrir o programa, etc
-  <br>
-  3. Não ser uma planilha
-  <br>
-  <br>
+  # <div align="center"> Escopo do Projeto </div>
+  
+  <div align="center"> O projeto se baseia em um sistema para o controle de informações em sala de aula, onde, o professor cliente deseja armazenar informações acerca do desempenho geral das turmas nas quais ministra aulas. Assim como informar o professor sobre as próximas atividades imediatas a ocorrer, e quais alunos ainda não as entregaram.</div>
+
+  <div align="center"> Para isso, a aplicação em desenvolvimento necessita ser capaz de: recolher informações sobre aulas, salas, alunos e avaliações( provas, trabalhos, entre outros ). Além de ser capaz de abstrair estas informções coletadas em forma de gráficos de estatísticas que informem o desempenho das turmas. Tudo isto, por meio de uma aplicação simples e  intuitiva, na qual sejam necessários poucos cliques para se obter as informações necessárias para o usuário que utilizará o aplicativo. </div> 
+  
+  # Requisitos do Projeto
+  
+  ### <div align="center">Requisitos Funcionais</div>
+  - <div align="center">Cadastro de aulas, salas, alunos e avaliações </div>
+  - <div align="center">Habilidade de lançar e editar tais informações</div>
+  - <div align="center">Estatisticas de tais informações</div>
+  ### <div align="center">Requisitos Não Funcionais</div>
+  - Usabilidade simples e intuitiva com poucos cliques
+  - Adaptabilidade ao conteudo: mostrar à aula atual ao abrir o programa, etc
+  - Não ser uma planilha
+  
+  
   <h1>Cronograma do Projeto</h1>
   
   <img src="/readme/Cronograma_Sprints.png" width="640" height="360"><br>
@@ -141,5 +129,4 @@
   <img src="/readme/Diagrama-Classes.png" width="800" height="500"><br>
   
   <br>
-</div>
 

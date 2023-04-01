@@ -18,7 +18,7 @@ Equipe FULLSTACK - API 2º Semestre
 
  <div align = "center"><img src="/readme/projeto.png" width="640" height="360"> </div>
 
-#
+  #
 
   ### <div align="center">Equipe-FULLSTACK </div>
  <div align="center"> <img src="/readme/fullstack.png" width="200" height="200"> </div>

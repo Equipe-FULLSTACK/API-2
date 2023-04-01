@@ -5,18 +5,19 @@
   <br>
   <br>
   <br>
-  <h4>Estágio do Projeto: Em andamento</h4>
+  <h4>Estado Atual do Projeto: Em andamento</h4>
   <br>
   <img src="/readme/projeto.png" width="640" height="360"><br>
   <br>
   
-  Estágio do Projeto 1º Sprint:<br>
+  Estado Final do Projeto 1º Sprint:<br>
   <br>
   <img src="/readme/projeto.png" width="640" height="360"><br>
   <br>
 
   <h1>Equipe-FULLSTACK<br></h1>
   <img src="/readme/fullstack.png" width="200" height="200"><br>
+  <br>
   <table style="align: left">
       <thead>
         <th>Nome</th>
@@ -99,8 +100,11 @@
   <br>
   3. Não ser uma planilha
   <br>
-
   <br>
+  <h1>Cronograma do Projeto</h1>
+  
+  <img src="/readme/Cronograma_Sprints.png" width="640" height="360"><br>
+  
   
   <h1>Tecnologias</h1>
   

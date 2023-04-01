@@ -67,20 +67,38 @@
   <br>
 
   <h1>Escopo do Projeto</h1>
-  Um sistema para o controle de informações em sala de aula; tais informações
-  consistem de salas, aulas, alunos e avaliações (provas, trabalhos, entre outros),
-  exibir estatísticas de tais sistemas, ênfase na usabilidade do sistema: rápido e intuitivo,
-  poucos clickes, adaptar o conteúdo mostrado de início à situação e a aula e sala atual.
+  O projeto se baseia em um sistema para o controle de informações em sala de aula, onde,
+  o professor cliente deseja armazenar informações acerca do desempenho geral das turmas 
+  nas quais ministra aulas. Assim como informar o professor sobre as próximas atividades
+  imediatas a ocorrer, e quais alunos ainda não as entregaram.
   <br>
-  
+  <br>
+  Para isso, a aplicação em desenvolvimento necessita ser capaz de: recolher informações
+  sobre aulas, salas, alunos e avaliações( provas, trabalhos, entre outros ). Além de 
+  ser capaz de abstrair estas informções coletadas em forma de gráficos de estatísticas 
+  que informem o desempenho das turmas. Tudo isto, por meio de uma aplicação simples e 
+  intuitiva, na qual sejam necessários poucos cliques para se obter as informações necessárias 
+  para o usuário que utilizará o aplicativo.
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Requisitos do Projeto</h1>
+  <br>
   <h3>Requisitos Funcionais</h3>
-  1. Cadastro de aulas, salas, alunos e avaliações<br>
-  2. Habilidade de lançar e editar tais informações<br>
-  3. Estatisticas de tais informações<br>
+  1. Cadastro de aulas, salas, alunos e avaliações
+  <br>
+  2. Habilidade de lançar e editar tais informações
+  <br>
+  3. Estatisticas de tais informações
+  <br>
   <h3>Requisitos Não Funcionais</h3>
-  1. Usabilidade simples e intuitiva com poucos clicks<br>
-  2. Adaptabilidade ao conteudo: mostrar à aula atual ao abrir o programa, etc<br>
-  3. Não ser uma planilha<br>
+  1. Usabilidade simples e intuitiva com poucos cliques
+  <br>
+  2. Adaptabilidade ao conteudo: mostrar à aula atual ao abrir o programa, etc
+  <br>
+  3. Não ser uma planilha
+  <br>
 
   <br>
   

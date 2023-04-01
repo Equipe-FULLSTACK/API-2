@@ -1,24 +1,31 @@
-<div align="center">
-  <h1>Equipe FULLSTACK - API 2º Semestre</h1>
-  <h3>Projeto API 2º Semestre:</h3>
-  <h3>FATEC São José dos Campos - Prof. Jessen Vidal</h3>
-  <br>
-  <br>
-  <br>
-  <h4>Estado Atual do Projeto: Em andamento</h4>
-  <br>
-  <img src="/readme/projeto.png" width="640" height="360"><br>
-  <br>
-  
-  Estado Final do Projeto 1º Sprint:<br>
-  <br>
-  <img src="/readme/projeto.png" width="640" height="360"><br>
-  <br>
+> Status: Developing
 
-  <h1>Equipe-FULLSTACK<br></h1>
-  <img src="/readme/fullstack.png" width="200" height="200"><br>
-  <br>
-  <table style="align: left">
+
+Equipe FULLSTACK - API 2º Semestre
+==================================
+**********************************
+
+###  <div align="center"> Projeto API 2º Semestre: </div>
+  ### <div align="center"> FATEC São José dos Campos - Prof. Jessen Vidal </div>
+
+
+
+  #### <div align="center"> Estado Atual do Projeto: Em andamento </div>
+  
+  <div align="center"> <img src="/readme/API_Recente.png "width="640" height="360"> </div>
+  
+  ### <div align="center"> Estado Final do Projeto 1º Sprint: </div>
+
+ <div align = "center"><img src="/readme/projeto.png" width="640" height="360"> </div>
+
+  #
+
+  ### <div align="center">Equipe-FULLSTACK </div>
+ <div align="center"> <img src="/readme/fullstack.png" width="200" height="200"> </div>
+ 
+  
+  <div align="center">
+  <table style="align: center">
       <thead>
         <th>Nome</th>
         <th>Foto</th>
@@ -66,80 +73,77 @@
     </tbody>
   </table>
   <br>
+  </div>
 
-  <h1>Escopo do Projeto</h1>
-  O projeto se baseia em um sistema para o controle de informações em sala de aula, onde,
-  o professor cliente deseja armazenar informações acerca do desempenho geral das turmas 
-  nas quais ministra aulas. Assim como informar o professor sobre as próximas atividades
-  imediatas a ocorrer, e quais alunos ainda não as entregaram.
-  <br>
-  <br>
-  Para isso, a aplicação em desenvolvimento necessita ser capaz de: recolher informações
-  sobre aulas, salas, alunos e avaliações( provas, trabalhos, entre outros ). Além de 
-  ser capaz de abstrair estas informções coletadas em forma de gráficos de estatísticas 
-  que informem o desempenho das turmas. Tudo isto, por meio de uma aplicação simples e 
-  intuitiva, na qual sejam necessários poucos cliques para se obter as informações necessárias 
-  para o usuário que utilizará o aplicativo.
-  <br>
-  <br>
-  <br>
-  <br>
-  <h1>Requisitos do Projeto</h1>
-  <br>
-  <h3>Requisitos Funcionais</h3>
-  1. Cadastro de aulas, salas, alunos e avaliações
-  <br>
-  2. Habilidade de lançar e editar tais informações
-  <br>
-  3. Estatisticas de tais informações
-  <br>
-  <h3>Requisitos Não Funcionais</h3>
-  1. Usabilidade simples e intuitiva com poucos cliques
-  <br>
-  2. Adaptabilidade ao conteudo: mostrar à aula atual ao abrir o programa, etc
-  <br>
-  3. Não ser uma planilha
-  <br>
-  <br>
-  <h1>Cronograma do Projeto</h1>
+  # <div align="center"> Escopo do Projeto </div>
   
+  <p align="center"> O projeto se baseia em um sistema para o controle de informações em sala de aula, onde, 
+  o professor cliente deseja armazenar informações acerca do desempenho geral das turmas nas quais ministra aulas. 
+  Assim como informar o professor sobre as próximas atividades imediatas a ocorrer, e quais alunos ainda não as entregaram.
+
+  <p align="center">
+  Para isso, a aplicação em desenvolvimento necessita ser capaz de: recolher informações sobre aulas, salas, alunos e avaliações( provas, trabalhos, entre outros ).
+  Além de ser capaz de abstrair estas informções coletadas em forma de gráficos de estatísticas que informem o desempenho das turmas. Tudo isto, por meio de uma         aplicação simples e  intuitiva, na qual sejam necessários poucos cliques para se obter as informações necessárias para o usuário que utilizará o aplicativo. </p>
+    
+  #
+  
+  # <p align="center">Requisitos do Projeto</p>
+  
+  ## <p align="center">Requisitos Funcionais
+  <p align="center">- Cadastro de aulas, salas, alunos e avaliações 
+  <p align="center">- Habilidade de lançar e editar tais informações
+  <p align="center">- Estatisticas de tais informações
+    
+  #  
+
+    
+  ## <p align="center">Requisitos Não Funcionais
+    
+   <p align="center">- Usabilidade simples e intuitiva com poucos cliques
+   <p align="center">- Adaptabilidade ao conteudo: mostrar à aula atual ao abrir o programa, etc
+   <p align="center">- Não ser uma planilha
+     
+  #
+
+     
+  # <p align="center">Cronograma do Projeto
+  
+  <p align="center">
   <img src="/readme/Cronograma_Sprints.png" width="640" height="360"><br>
   
   
-  <h1>Tecnologias Utilizadas</h1>
+  # <p align="center">Tecnologias Utilizadas
   
+  <p align="center">
   <img src="/readme/Tecnologias_Usadas1.png" width="640" height="360"><br>
- 
   
-  <br>
   
-  <h1>Product Backlog</h1>
+  # <p align="center">Product Backlog
   
+  <p align="center">
   <img src="/readme/Backlog_Produto.png" width="640" height="360"><br>
   
-  <br>
   
-  <h1>Gráfico de Burndown</h1>
+  # <p align="center">Gráfico de Burndown
+    
+  <p align="center">
   <img src="/readme/Grafico_Burndown_Sprint1.png" width="640" height="360"><br>
   
-  <br>
     
-  <h1>Diagrama Entidade Relacionamento</h1>
+  # <p align="center">Diagrama Entidade Relacionamento
   
+  <p align="center">
   <img src="/readme/Diagrama-DER.png" width="610" height="720"><br>
   
-  <br>
-  
-  <h1>Diagrama UML</h1>
-  
+
+  # <p align="center">Diagrama UML
+    
+  <p align="center">
   <img src="/readme/Diagrama-UML2.png" width="520" height="600"><br>
+
+  # <p align="center">Diagrama Tabelas Banco de Dados
   
-  <br>
-  
-  <h1>Diagrama Tabelas Banco de Dados</h1>
-  
+  <p align="center">
   <img src="/readme/Diagrama-Classes.png" width="800" height="500"><br>
   
-  <br>
-</div>
 

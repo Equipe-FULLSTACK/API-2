@@ -157,8 +157,25 @@ Equipe FULLSTACK - API 2º Semestre
   Ao longo desta Sprint, foi planejada como seria a estrutura final da funcionalidade da aplicação,
   onde, por consenso da equipe, foi definida a estrutura por meio de que a aplicação operaria. Determinando
   como seria a estrutura de dados entre as classes do sistema, e, quais funções a serem realizadas por estas.
+  
+  Com base nisso, foi elaborado o layout da Interface Gráfica, de modo em que o usuário possa acessar as seguintes funcionalidades:
+  - Alunos
+  - Aulas
+  - Atividades
+  - Estatísticas
     
-  Disto, foram feitos diferentes diagramas para representar as estruturas do sistema.
+  Elaborada a Interface Gráfica do Usuário, foi definido quais as seriam funcionalidades que o usuário precisaria utilizar para que 
+  a aplicação retornasse as informações que deseja. E, de que modo o cliente poderia acessar tais funcionalidades. Com isso em mente,
+  foi projetado o layout das abas de: Alunos, Aulas, Atividades e Estatísticas. Com a estrutura pronta para que seja capaz de fornecer
+  os dados que sejam mais essenciais ao cliente.
+  
+  Disto, foi então desenvolvido o código para as classes que compunham o sistema, contendo os atributos necessários de informação de
+  cada uma. Além das funções basicas para criação de novas entidades, que possibilitam a gravação dos atributos em um banco de dados.
+  
+  Por fim, foram então desenvolvidos os códigos necessários para que fosse feita a conexão do sistema com um banco de dados local. De
+  forma que, criando a estrutura das tabelas de informações, já seria possível o armazenamento de informações no banco de dados.
+  
+  Por isso, foram então feitos diferentes diagramas para representar como as estruturas de informação estariam dispostas no sistema.
   
   Inicialmente montou-se um modelo conceitual da estrutura de dados, informando sobre todas as entidades que
   participariam da infraestrutura do banco de dados, e quais atributos cada uma possuiria.
@@ -207,7 +224,7 @@ Equipe FULLSTACK - API 2º Semestre
     
    <br>
     
-  Por conta de adversidades ocorrentes ao longo da Sprint, encontraram-se problemas que levaram a remodelações imprevistas no projeto, 
+  Por conta de adversidades ocorrentes ao longo da Sprint, encontraram-se problemas que levaram mudanças imprevistas no projeto, 
   de forma que levou a atrasos no cronograma inicial esperado. Levando a entrega dos itens não concluídos na
   primeira Sprint para a segunda Sprint.
   

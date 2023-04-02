@@ -8,9 +8,9 @@ Equipe FULLSTACK - API 2º Semestre
 
 
 
-  #### <div align="center"> Estado Atual do Projeto: Em andamento </div>
+  #### <div align="center"> Estado Atual do Projeto: </div>
   
-  <div align="center"> <img src="/readme/API_Recente.png "width="640" height="360"> </div>
+  <div align="center"> <img src="/readme/estilos.gif "width="640" height="360"> </div>
   
   #
 
@@ -125,7 +125,11 @@ Equipe FULLSTACK - API 2º Semestre
     
   ### <div align="center"> Estado Final do Projeto 1º Sprint: </div>
 
-  <div align = "center"><img src="/readme/projeto.png" width="640" height="360"> </div>
+  <div align = "center">
+    <img src="/readme/tela01.png" width="640" height="360"><br>
+    <img src="/readme/tela02.png" width="640" height="360"><br>
+    <img src="/readme/tela03.png" width="640" height="360">
+  </div>
 
 
 

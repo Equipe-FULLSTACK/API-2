@@ -163,14 +163,14 @@ Equipe FULLSTACK - API 2º Semestre
   como seria a estrutura de dados entre as classes do sistema, e, quais funções a serem realizadas por estas.
   
   Com base nisso, foi elaborado o layout da Interface Gráfica, de modo em que o usuário possa acessar as seguintes funcionalidades:
-  - Alunos
+  - Próximas Atividades para o dia
   - Aulas
   - Atividades
   - Estatísticas
     
   Elaborada a Interface Gráfica do Usuário, foi definido quais as seriam funcionalidades que o usuário precisaria utilizar para que 
   a aplicação retornasse as informações que deseja. E, de que modo o cliente poderia acessar tais funcionalidades. Com isso em mente,
-  foi projetado o layout das abas de: Alunos, Aulas, Atividades e Estatísticas. Com a estrutura pronta para que seja capaz de fornecer
+  foi projetado o layout das abas de: Inicio, Aulas, Atividades e Estatísticas. Com a estrutura pronta para que seja capaz de fornecer
   os dados que sejam mais essenciais ao cliente.
   
   Disto, foi então desenvolvido o código para as classes que compunham o sistema, contendo os atributos necessários de informação de

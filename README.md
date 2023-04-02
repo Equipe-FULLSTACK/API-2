@@ -128,7 +128,7 @@ Equipe FULLSTACK - API 2º Semestre
   <div align = "center">
     <img src="/readme/tela01.png" width="640" height="360"><br>
     <img src="/readme/tela02.png" width="640" height="360"><br>
-    <img src="/readme/tela03.png" width="640" height="360">
+    <img src="/readme/tela04.png" width="640" height="360">
   </div>
 
 

@@ -23,7 +23,7 @@ public class Inicio {
 		Menu.definirCombo  (Menu.combo_atualizar_entrega,            Menu.pct(width,  2), Menu.pct(height, 58), Menu.pct(width, 13), Menu.pct(height,  5), Menu.fonteLista);
 		Menu.definirTxt    (Menu.txt_atualizar_nota,                 Menu.pct(width, 15), Menu.pct(height, 58), Menu.pct(width,  4), Menu.pct(height,  5), Menu.fonteLista);
 		Menu.definirTxtArea(Menu.panel_txtarea_atualizar_comentario, Menu.pct(width,  2), Menu.pct(height, 63), Menu.pct(width, 17), Menu.pct(height, 21), Menu.fonteLista, Menu.scroll_txtarea_atualizar_comentario, Menu.txtarea_atualizar_comentario);
-		Menu.definirBtn    (Menu.btn_atualizar,                      Menu.pct(width,  2), Menu.pct(height, 84), Menu.pct(width, 17), Menu.pct(height,  6), Menu.fonteBtnTopo);
+		Menu.definirBtn    (Menu.btn_atualizar,                      Menu.pct(width,  2), Menu.pct(height, 84), Menu.pct(width, 17), Menu.pct(height,  6), Menu.fonteBtn);
 		
 		Menu.definirLbl    (Menu.lbl_alunos,                         Menu.pct(width, 20), Menu.pct(height, 18), Menu.pct(width, 17), Menu.pct(height,  8), Menu.fonteBtnTopo);
 		Menu.definirList   (Menu.panel_list_alunos,                  Menu.pct(width, 20), Menu.pct(height, 26), Menu.pct(width, 17), Menu.pct(height, 64), Menu.fonteLista, Menu.scroll_list_alunos, Menu.list_alunos);

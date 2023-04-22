@@ -54,6 +54,7 @@ public class Menu {
 	//fontes
 	static Font fonteAulaAtual = new Font("Arial", Font.PLAIN, pct((int)(((double)width+((double)height)*0.5625)/2), 3.5));
 	static Font fonteBtnTopo = new Font("Arial", Font.PLAIN, pct((int)(((double)width+((double)height)*0.5625)/2), 2.75));
+	static Font fonteBtn = new Font("Arial", Font.PLAIN, pct((int)(((double)width+((double)height)*0.5625)/2), 2.5));
 	static Font fonteLista = new Font("Arial", Font.PLAIN, pct((int)(((double)width+((double)height)*0.5625)/2), 2));
 	
 	//HEADER
@@ -233,6 +234,49 @@ public class Menu {
 	static JButton btn_carregar2 = new JButton("Carregar");
 	
 	
+	
+	//ESTATISTICAS
+	//labels
+	static JLabel lbl_dia3 = new JLabel("Dia", SwingConstants.CENTER);
+	static JLabel lbl_turmas3 = new JLabel("Turma", SwingConstants.CENTER);
+	static JLabel lbl_inicio3 = new JLabel("Inicio", SwingConstants.CENTER);
+	static JLabel lbl_final3 = new JLabel("Final", SwingConstants.CENTER);
+	static JLabel lbl_tarefas3 = new JLabel("Tarefas", SwingConstants.CENTER);
+	
+	static JLabel lbl_limiar3 = new JLabel("Limiar");
+	static JLabel lbl_media3 = new JLabel("Media: 5.0");
+	
+	//listboxes
+	static JPanel panel_list_dia3 = new JPanel(new BorderLayout());
+	static DefaultListModel<String> listDia3 = new DefaultListModel<>();
+	static JList<String> list_dia3 = new JList<>(listDia3);
+	static JScrollPane scroll_list_dia3 = new JScrollPane(list_dia3);
+	
+	static JPanel panel_list_turmas3 = new JPanel(new BorderLayout());
+	static DefaultListModel<String> listTurmas3 = new DefaultListModel<>();
+	static JList<String> list_turmas3 = new JList<>(listTurmas3);
+	static JScrollPane scroll_list_turmas3 = new JScrollPane(list_turmas3);
+	
+	static JPanel panel_list_inicio3 = new JPanel(new BorderLayout());
+	static DefaultListModel<String> listInicio3 = new DefaultListModel<>();
+	static JList<String> list_inicio3 = new JList<>(listInicio3);
+	static JScrollPane scroll_list_inicio3 = new JScrollPane(list_inicio3);
+	
+	static JPanel panel_list_final3 = new JPanel(new BorderLayout());
+	static DefaultListModel<String> listFinal3 = new DefaultListModel<>();
+	static JList<String> list_final3 = new JList<>(listFinal3);
+	static JScrollPane scroll_list_final3 = new JScrollPane(list_final3);
+	
+	static JPanel panel_list_tarefas3 = new JPanel(new BorderLayout());
+	static DefaultListModel<String> listTarefas3 = new DefaultListModel<>();
+	static JList<String> list_tarefas3 = new JList<>(listTarefas3);
+	static JScrollPane scroll_list_tarefas3 = new JScrollPane(list_tarefas3);
+	
+	//outros
+	static JTextField txt_limiar3 = new JTextField("");
+	static JPanel panel_divisao2 = new JPanel(new BorderLayout());
+	
+	
 	//OPCOES
 	static JToggleButton tbtn_metal = new JToggleButton("Java");        static JToggleButton tbtn_windows = new JToggleButton("Windows"); 
 	static JToggleButton tbtn_mac = new JToggleButton("Mac");           static JToggleButton tbtn_win_old = new JToggleButton("Windows Antigo");
@@ -346,18 +390,18 @@ public class Menu {
 		header.definirHeader(width, height);
 		inicio.definirInicio(width, height); inicio.definirVisivel(false);
 		aulastarefas.definirAulasTarefas(width, height); aulastarefas.definirVisivel(false);
-		//estatisticas.definirEstatisticas(width, height); estatisticas.definirVisivel(false);
+		estatisticas.definirEstatisticas(width, height); estatisticas.definirVisivel(false);
 		opcoes.definirOpcoes(width, height); opcoes.definirVisivel(false);
 		
 		
 		header.definirEventos(inicio, aulastarefas, estatisticas, opcoes);
 		inicio.definirEventos();
 		aulastarefas.definirEventos();
-		//estatisticas.definirEventos();
+		estatisticas.definirEventos();
 		opcoes.definirEventos();
 		
-		listAulas.addElement("Aula X"); listHorarioInicio.addElement("07:10"); listHorarioFinal.addElement("08:50");
-		listAulas.addElement("Aula Y"); listHorarioInicio.addElement("09:15"); listHorarioFinal.addElement("10:55");
+		listAulas.addElement("Escola X - 2o ano B"); listHorarioInicio.addElement("07:10"); listHorarioFinal.addElement("08:50");
+		listAulas.addElement("Escola Y - 3o ano A"); listHorarioInicio.addElement("09:15"); listHorarioFinal.addElement("10:55");
 		
 		janela.setSize(width, height);
 		janela.setLayout(null);
@@ -375,12 +419,13 @@ public class Menu {
 				
 				fonteAulaAtual = new Font("Arial", Font.PLAIN, pct((int)(((double)width+((double)height)*0.5625)/2), 3.5));
 				fonteBtnTopo = new Font("Arial", Font.PLAIN, pct((int)(((double)width+((double)height)*0.5625)/2), 2.75));
+				fonteBtn = new Font("Arial", Font.PLAIN, pct((int)(((double)width+((double)height)*0.5625)/2), 2.5));
 				fonteLista = new Font("Arial", Font.PLAIN, pct((int)(((double)width+((double)height)*0.5625)/2), 2));
 				
 				header.definirHeader(width, height);
 				inicio.definirInicio(width, height);
 				aulastarefas.definirAulasTarefas(width, height);
-				//estatisticas.definirEstatisticas(width, height);
+				estatisticas.definirEstatisticas(width, height);
 				opcoes.definirOpcoes(width, height);
 			}
 		});
@@ -415,7 +460,12 @@ public class Menu {
 		SwingUtilities.updateComponentTreeUI(janela);
 		atualizarAulaAtual();
 		
-		listDia1.addElement("Segunda-feira"); listDia1.addElement("Terca-feira"); listDia1.addElement("Quarta-feira"); listDia1.addElement("Quinta-feira"); listDia1.addElement("Sexta-feira");
-		listDia1.addElement("Sabado"); listDia1.addElement("Domingo");
+		listDia1.addElement("Segunda-feira"); listDia3.addElement("Segunda-feira");
+		listDia1.addElement("Terca-feira");   listDia3.addElement("Terca-feira");
+		listDia1.addElement("Quarta-feira");  listDia3.addElement("Quarta-feira");
+		listDia1.addElement("Quinta-feira");  listDia3.addElement("Quinta-feira");
+		listDia1.addElement("Sexta-feira");   listDia3.addElement("Sexta-feira");
+		listDia1.addElement("Sabado");        listDia3.addElement("Sabado");
+		listDia1.addElement("Domingo");       listDia3.addElement("Domingo");
 	}
 }

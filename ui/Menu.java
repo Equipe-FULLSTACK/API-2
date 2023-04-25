@@ -18,13 +18,22 @@ import java.time.format.DateTimeFormatter;
 import static java.time.temporal.ChronoUnit.MINUTES;
 
 import java.text.SimpleDateFormat;
- 
 
+import java.awt.BorderLayout;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.general.DefaultPieDataset;
+import org.jfree.chart.labels.PieSectionLabelGenerator;  
+import org.jfree.chart.labels.StandardPieSectionLabelGenerator;  
+import org.jfree.chart.plot.PiePlot;
+import java.text.DecimalFormat;
 
 
 public class Menu {
-	//javac -d ./api/ -cp ".;jcalendar-1.4.jar;flatlaf-3.0.jar" Menu.java
-	//java -cp ".;jcalendar-1.4.jar;flatlaf-3.0.jar;api" Menu
+	//javac -d ./api/ -cp ".;jcalendar-1.4.jar;flatlaf-3.0.jar;jcommon-1.0.0.jar;jfreechart-1.0.1.jar" Menu.java
+	//java -cp ".;jcalendar-1.4.jar;flatlaf-3.0.jar;jcommon-1.0.0.jar;jfreechart-1.0.1.jar;api" Menu
 	
 	//janela
 	static JFrame janela = new JFrame();
@@ -275,6 +284,7 @@ public class Menu {
 	//outros
 	static JTextField txt_limiar3 = new JTextField("");
 	static JPanel panel_divisao2 = new JPanel(new BorderLayout());
+	static JPanel panel_chart = new JPanel(new BorderLayout());
 	
 	
 	//OPCOES
@@ -382,6 +392,30 @@ public class Menu {
 	static void definirPanel(JPanel obj, int x, int y, int w, int h){
 		obj.setBounds(x, y, w, h);
 		janela.add(obj);
+	}
+	static void definirGrafico(JPanel obj, int x, int y, int w, int h){
+		obj.removeAll();
+		obj.setBounds(x, y, w, h);
+		
+		DefaultPieDataset dataset = new DefaultPieDataset( );
+		dataset.setValue( "Aprovados" , 10 );
+		dataset.setValue( "Reprovados" , 13 );
+		dataset.setValue( "Não Atribuidos" , 7 );
+        JFreeChart chart = ChartFactory.createPieChart(null, dataset, true, true, false);
+        ChartPanel chartpanel = new ChartPanel(chart);
+        //chartpanel.setDomainZoomable(true);
+		
+		PieSectionLabelGenerator labelGenerator = new StandardPieSectionLabelGenerator(  
+			"Alunos {0} : ({2})", new DecimalFormat("0"), new DecimalFormat("0%"));
+		PiePlot plot = (PiePlot) chart.getPlot();
+			plot.setLabelGenerator(labelGenerator);
+			plot.setSectionPaint(0, Color.green);
+			plot.setSectionPaint(1, Color.red);
+			plot.setSectionPaint(2, Color.lightGray);
+		
+		obj.add(chartpanel);
+		janela.add(obj);
+		chartpanel.updateUI();
 	}
 
 	

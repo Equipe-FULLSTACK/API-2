@@ -35,8 +35,8 @@ public class AulasTarefas {
 		Menu.panel_divisao.setOpaque(true); Menu.panel_divisao.setBackground(Color.GRAY);
 		
 		Menu.definirLbl (Menu.lbl_data2,            Menu.pct(width, 50), Menu.pct(height,  9), Menu.pct(width, 10), Menu.pct(height,  8), Menu.fonteBtnTopo);
-		Menu.definirDate(Menu.datepicker_tarefa,    Menu.pct(width, 51), Menu.pct(height, 16), Menu.pct(width, 10), Menu.pct(height,  5), Menu.fonteLista);
-		Menu.definirLbl (Menu.lbl_dia2,             Menu.pct(width, 61), Menu.pct(height, 14), Menu.pct(width, 13), Menu.pct(height,  8), Menu.fonteBtnTopo);
+		Menu.definirDate(Menu.datepicker_tarefa,    Menu.pct(width, 51), Menu.pct(height, 16), Menu.pct(width, 22), Menu.pct(height,  5), Menu.fonteLista);
+		Menu.definirLbl (Menu.lbl_dia2,             Menu.pct(width, 61), Menu.pct(height,  9), Menu.pct(width, 13), Menu.pct(height,  8), Menu.fonteBtnTopo);
 		
 		Menu.definirLbl (Menu.lbl_turmas2,          Menu.pct(width, 50), Menu.pct(height, 20), Menu.pct(width, 12), Menu.pct(height,  8), Menu.fonteBtnTopo);
 		Menu.definirLbl (Menu.lbl_inicio2,          Menu.pct(width, 63), Menu.pct(height, 20), Menu.pct(width,  5), Menu.pct(height,  8), Menu.fonteBtnTopo);

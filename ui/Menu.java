@@ -505,5 +505,6 @@ public class Menu {
 		listDia1.addElement("Domingo");       listDia3.addElement("Domingo");
 		
 		Database.connectDatabase();
+		Database.selectTarefas(listTarefas2, AulasTarefas.formatador.format(datepicker_tarefa.getDate()));
 	}
 }

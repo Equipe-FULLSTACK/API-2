@@ -13,6 +13,9 @@ import java.text.SimpleDateFormat;
 import java.awt.Color;
 
 public class AulasTarefas {
+	
+	static SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+	
 	static void definirAulasTarefas(int width, int height){
 		Menu.definirLbl (Menu.lbl_dia1,             Menu.pct(width,  2), Menu.pct(height,  9), Menu.pct(width, 22), Menu.pct(height,  8), Menu.fonteBtnTopo);
 		Menu.definirList(Menu.panel_list_dia1,      Menu.pct(width,  2), Menu.pct(height, 16), Menu.pct(width, 22), Menu.pct(height, 23), Menu.fonteLista, Menu.scroll_list_dia1, Menu.list_dia1);
@@ -118,26 +121,26 @@ public class AulasTarefas {
 	static void definirEventos() {
 		//lists
 		Menu.list_dia1.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
-			Database.selectAulas(Menu.list_dia1.getSelectedValue());
+			Database.selectAulas(Menu.listTurmas1, Menu.listInicio1, Menu.listFinal1, Menu.list_dia1.getSelectedValue());
 		}});
 		
 		Menu.list_turmas1.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
 			Menu.list_inicio1.setSelectedIndex(Menu.list_turmas1.getSelectedIndex());
 			Menu.list_final1.setSelectedIndex(Menu.list_turmas1.getSelectedIndex());
 			
-			Database.selectAlunosAulas(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
+			Database.selectAlunosAulas(Menu.listAlunos1, Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
 		}});
 		Menu.list_inicio1.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
 			Menu.list_turmas1.setSelectedIndex(Menu.list_inicio1.getSelectedIndex());
 			Menu.list_final1.setSelectedIndex(Menu.list_inicio1.getSelectedIndex());
 			
-			Database.selectAlunosAulas(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
+			Database.selectAlunosAulas(Menu.listAlunos1, Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
 		}});
 		Menu.list_final1.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
 			Menu.list_turmas1.setSelectedIndex(Menu.list_final1.getSelectedIndex());
 			Menu.list_inicio1.setSelectedIndex(Menu.list_final1.getSelectedIndex());
 			
-			Database.selectAlunosAulas(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
+			Database.selectAlunosAulas(Menu.listAlunos1, Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
 		}});
 		
 		
@@ -146,6 +149,8 @@ public class AulasTarefas {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Adicionando aula"); 
 				Database.insertAula(Menu.txt_turmas1.getText(), Menu.list_dia1.getSelectedValue(), Menu.txt_inicio1.getText(), Menu.txt_final1.getText());
+				
+				Database.selectAulas(Menu.listTurmas1, Menu.listInicio1, Menu.listFinal1, Menu.list_dia1.getSelectedValue());
 			}
 		});
 		//btn_remover_aula1
@@ -153,6 +158,8 @@ public class AulasTarefas {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Removendo aula");
 				Database.deleteAula(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
+				
+				Database.selectAulas(Menu.listTurmas1, Menu.listInicio1, Menu.listFinal1, Menu.list_dia1.getSelectedValue());
 			}
 		});
 		
@@ -161,6 +168,8 @@ public class AulasTarefas {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Adicionando aluno 1");
 				Database.insertAlunoAula(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue(), Menu.txt_alunos1.getText());
+				
+				Database.selectAlunosAulas(Menu.listAlunos1, Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
 			}
 		});
 		//btn_remover_aluno1
@@ -168,7 +177,9 @@ public class AulasTarefas {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Removendo aluno 1");
 				Database.deleteAlunoAula(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue(), Menu.list_alunos1.getSelectedValue());
-			}
+				
+				Database.selectAlunosAulas(Menu.listAlunos1, Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
+			}	
 		});
 		
 		
@@ -176,12 +187,18 @@ public class AulasTarefas {
 		Menu.btn_adicionar_tarefa2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Adicionando tarefa");
+				Database.insertTarefa(Menu.txt_tarefas2.getText(), Menu.lbl_data.getText(), formatador.format(Menu.datepicker_tarefa.getDate()));
+				
+				Database.selectTarefas(Menu.listTarefas2, formatador.format(Menu.datepicker_tarefa.getDate()));
 			}
 		});
 		//btn_remover_tarefa2
 		Menu.btn_remover_tarefa2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Removendo tarefa");
+				Database.deleteTarefa(Menu.txt_tarefas2.getText(), formatador.format(Menu.datepicker_tarefa.getDate()));
+				
+				Database.selectTarefas(Menu.listTarefas2, formatador.format(Menu.datepicker_tarefa.getDate()));
 			}
 		});
 		
@@ -189,26 +206,31 @@ public class AulasTarefas {
 		Menu.btn_adicionar_aluno2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Adicionando aluno 2");
+				
 			}
 		});
 		//btn_remover_aluno2
 		Menu.btn_remover_aluno2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Removendo aluno 2");
-			}
+				
+			}	
 		});
 		
 		//btn_carregar2
 		Menu.btn_carregar2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Carregando alunos");
+				Database.selectAlunosAulas(Menu.listAlunos2, Menu.list_turmas2.getSelectedValue(), Menu.lbl_dia2.getText(), Menu.list_inicio2.getSelectedValue(), Menu.list_final2.getSelectedValue());
 			}
 		});
 		
 		Menu.datepicker_tarefa.getDateEditor().addPropertyChangeListener(new PropertyChangeListener() { public void propertyChange(PropertyChangeEvent e) {
 			if ("date".equals(e.getPropertyName())) {
 				Menu.lbl_dia2.setText((new SimpleDateFormat("EEEE").format((Date) e.getNewValue())).substring(0,1).toUpperCase() + (new SimpleDateFormat("EEEE").format((Date) e.getNewValue())).substring(1));
-				Database.selectAulas2(Menu.lbl_dia2.getText());
+				Database.selectAulas(Menu.listTurmas2, Menu.listInicio2, Menu.listFinal2, Menu.lbl_dia2.getText());
+			
+				Database.selectTarefas(Menu.listTarefas2, formatador.format(Menu.datepicker_tarefa.getDate()));
 			}
 		}});
 		

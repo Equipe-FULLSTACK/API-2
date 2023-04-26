@@ -32,8 +32,8 @@ import java.text.DecimalFormat;
 
 
 public class Menu {
-	//javac -d ./api/ -cp ".;jcalendar-1.4.jar;flatlaf-3.0.jar;jcommon-1.0.0.jar;jfreechart-1.0.1.jar" Menu.java
-	//java -cp ".;jcalendar-1.4.jar;flatlaf-3.0.jar;jcommon-1.0.0.jar;jfreechart-1.0.1.jar;api" Menu
+	//javac -d ./api/ -cp ".;jcalendar-1.4.jar;flatlaf-3.0.jar;jcommon-1.0.0.jar;jfreechart-1.0.1.jar;h2-2.1.214.jar" Menu.java
+	//java -cp ".;jcalendar-1.4.jar;flatlaf-3.0.jar;jcommon-1.0.0.jar;jfreechart-1.0.1.jar;h2-2.1.214.jar;api" Menu
 	
 	//janela
 	static JFrame janela = new JFrame();
@@ -47,6 +47,7 @@ public class Menu {
 	static AulasTarefas aulastarefas = new AulasTarefas();
 	static Estatisticas estatisticas = new Estatisticas();
 	static Opcoes opcoes = new Opcoes();
+	static Database database = new Database();
 	
 	//data
 	static DateTimeFormatter dataFormato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -282,7 +283,7 @@ public class Menu {
 	static JScrollPane scroll_list_tarefas3 = new JScrollPane(list_tarefas3);
 	
 	//outros
-	static JTextField txt_limiar3 = new JTextField("");
+	static JTextField txt_limiar3 = new JTextField("6.0");
 	static JPanel panel_divisao2 = new JPanel(new BorderLayout());
 	static JPanel panel_chart = new JPanel(new BorderLayout());
 	
@@ -400,7 +401,7 @@ public class Menu {
 		DefaultPieDataset dataset = new DefaultPieDataset( );
 		dataset.setValue( "Aprovados" , 10 );
 		dataset.setValue( "Reprovados" , 13 );
-		dataset.setValue( "Não Atribuidos" , 7 );
+		dataset.setValue( "Nao Atribuidos" , 7 );
         JFreeChart chart = ChartFactory.createPieChart(null, dataset, true, true, false);
         ChartPanel chartpanel = new ChartPanel(chart);
         //chartpanel.setDomainZoomable(true);
@@ -501,5 +502,7 @@ public class Menu {
 		listDia1.addElement("Sexta-feira");   listDia3.addElement("Sexta-feira");
 		listDia1.addElement("Sabado");        listDia3.addElement("Sabado");
 		listDia1.addElement("Domingo");       listDia3.addElement("Domingo");
+		
+		Database.connectDatabase();
 	}
 }

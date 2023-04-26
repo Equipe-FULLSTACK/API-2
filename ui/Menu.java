@@ -34,6 +34,7 @@ import java.text.DecimalFormat;
 public class Menu {
 	//javac -d ./api/ -cp ".;jcalendar-1.4.jar;flatlaf-3.0.jar;jcommon-1.0.0.jar;jfreechart-1.0.1.jar;h2-2.1.214.jar" Menu.java
 	//java -cp ".;jcalendar-1.4.jar;flatlaf-3.0.jar;jcommon-1.0.0.jar;jfreechart-1.0.1.jar;h2-2.1.214.jar;api" Menu
+	//java -jar h2-2.1.214.jar
 	
 	//janela
 	static JFrame janela = new JFrame();
@@ -473,7 +474,7 @@ public class Menu {
 				String diaFormatado = dataAtual.format(diaFormato);
 				lbl_hora.setText(horaFormatada);
 				lbl_data.setText(dataFormatada);
-				lbl_dia.setText(diaFormatado);
+				lbl_dia.setText(diaFormatado.substring(0,1).toUpperCase() + diaFormatado.substring(1));
 				aulaatualantiga = aulaatual;
 				aulaatual = descobrirAulaAtual();
 				if (list_aulas.getSelectedIndex() == aulaatualantiga && aulaatual != aulaatualantiga) {
@@ -481,7 +482,7 @@ public class Menu {
 				}
 			}
 		}
-		lbl_dia_semana.setText(LocalDateTime.now().format(diaFormato));
+		lbl_dia_semana.setText(LocalDateTime.now().format(diaFormato).substring(0,1).toUpperCase() + LocalDateTime.now().format(diaFormato).substring(1));
 		lbl_dia2.setText(LocalDateTime.now().format(diaFormato));
 		
 		Timer temporizador = new Timer();

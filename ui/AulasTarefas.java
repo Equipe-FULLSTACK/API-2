@@ -2,6 +2,11 @@ import java.awt.event.*;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
 
+import javax.swing.JList;
+import javax.swing.JLabel;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
 import java.util.Date;
 import java.text.SimpleDateFormat;
 
@@ -111,16 +116,43 @@ public class AulasTarefas {
 	}
 	
 	static void definirEventos() {
+		//lists
+		Menu.list_dia1.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Database.selectAulas(Menu.list_dia1.getSelectedValue());
+		}});
+		
+		Menu.list_turmas1.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Menu.list_inicio1.setSelectedIndex(Menu.list_turmas1.getSelectedIndex());
+			Menu.list_final1.setSelectedIndex(Menu.list_turmas1.getSelectedIndex());
+			
+			Database.selectAlunosAulas(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
+		}});
+		Menu.list_inicio1.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Menu.list_turmas1.setSelectedIndex(Menu.list_inicio1.getSelectedIndex());
+			Menu.list_final1.setSelectedIndex(Menu.list_inicio1.getSelectedIndex());
+			
+			Database.selectAlunosAulas(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
+		}});
+		Menu.list_final1.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Menu.list_turmas1.setSelectedIndex(Menu.list_final1.getSelectedIndex());
+			Menu.list_inicio1.setSelectedIndex(Menu.list_final1.getSelectedIndex());
+			
+			Database.selectAlunosAulas(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
+		}});
+		
+		
 		//btn_adicionar_aula1
 		Menu.btn_adicionar_aula1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Adicionando aula");
+				System.out.println("Adicionando aula"); 
+				Database.insertAula(Menu.txt_turmas1.getText(), Menu.list_dia1.getSelectedValue(), Menu.txt_inicio1.getText(), Menu.txt_final1.getText());
 			}
 		});
 		//btn_remover_aula1
 		Menu.btn_remover_aula1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Removendo aula");
+				Database.deleteAula(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
 			}
 		});
 		
@@ -128,12 +160,14 @@ public class AulasTarefas {
 		Menu.btn_adicionar_aluno1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Adicionando aluno 1");
+				Database.insertAlunoAula(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue(), Menu.txt_alunos1.getText());
 			}
 		});
 		//btn_remover_aluno1
 		Menu.btn_remover_aluno1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Removendo aluno 1");
+				Database.deleteAlunoAula(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue(), Menu.list_alunos1.getSelectedValue());
 			}
 		});
 		
@@ -173,8 +207,22 @@ public class AulasTarefas {
 		
 		Menu.datepicker_tarefa.getDateEditor().addPropertyChangeListener(new PropertyChangeListener() { public void propertyChange(PropertyChangeEvent e) {
 			if ("date".equals(e.getPropertyName())) {
-				Menu.lbl_dia2.setText(new SimpleDateFormat("EEEE").format((Date) e.getNewValue()));
-            }
+				Menu.lbl_dia2.setText((new SimpleDateFormat("EEEE").format((Date) e.getNewValue())).substring(0,1).toUpperCase() + (new SimpleDateFormat("EEEE").format((Date) e.getNewValue())).substring(1));
+				Database.selectAulas2(Menu.lbl_dia2.getText());
+			}
+		}});
+		
+		Menu.list_turmas2.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Menu.list_inicio2.setSelectedIndex(Menu.list_turmas2.getSelectedIndex());
+			Menu.list_final2.setSelectedIndex(Menu.list_turmas2.getSelectedIndex());
+		}});
+		Menu.list_inicio2.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Menu.list_turmas2.setSelectedIndex(Menu.list_inicio2.getSelectedIndex());
+			Menu.list_final2.setSelectedIndex(Menu.list_inicio2.getSelectedIndex());
+		}});
+		Menu.list_final2.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Menu.list_turmas2.setSelectedIndex(Menu.list_final2.getSelectedIndex());
+			Menu.list_inicio2.setSelectedIndex(Menu.list_final2.getSelectedIndex());
 		}});
 	}
 }

@@ -38,7 +38,7 @@ public class Inicio {
 		Menu.definirLbl    (Menu.lbl_aulas_dia,                      Menu.pct(width, 68), Menu.pct(height, 18), Menu.pct(width, 17), Menu.pct(height,  8), Menu.fonteBtnTopo);
 		Menu.definirLbl    (Menu.lbl_horario,                        Menu.pct(width, 87), Menu.pct(height, 18), Menu.pct(width, 10), Menu.pct(height,  8), Menu.fonteBtnTopo);
 		Menu.definirDate   (Menu.datepicker_inicio,                  Menu.pct(width, 68), Menu.pct(height, 26), Menu.pct(width, 17), Menu.pct(height,  5), Menu.fonteLista);
-		Menu.definirLbl    (Menu.lbl_dia_semana,                     Menu.pct(width, 83), Menu.pct(height, 24.5), Menu.pct(width, 16), Menu.pct(height,  8), Menu.fonteBtnTopo);
+		Menu.definirLbl    (Menu.lbl_dia_semana,                     Menu.pct(width, 83), Menu.pct(height, 24.5), Menu.pct(width, 16.5), Menu.pct(height,  8), Menu.fonteBtnTopo);
 		Menu.definirList   (Menu.panel_list_aulas,                   Menu.pct(width, 68), Menu.pct(height, 32), Menu.pct(width, 19), Menu.pct(height, 58), Menu.fonteLista, Menu.scroll_list_aulas, Menu.list_aulas);
 		Menu.definirList   (Menu.panel_list_horario_inicio,          Menu.pct(width, 87), Menu.pct(height, 32), Menu.pct(width,  5), Menu.pct(height, 58), Menu.fonteLista, Menu.scroll_list_horario_inicio, Menu.list_horario_inicio);
 		Menu.definirList   (Menu.panel_list_horario_final,           Menu.pct(width, 92), Menu.pct(height, 32), Menu.pct(width,  5), Menu.pct(height, 58), Menu.fonteLista, Menu.scroll_list_horario_final, Menu.list_horario_final);
@@ -131,7 +131,7 @@ public class Inicio {
 		
 		Menu.datepicker_inicio.getDateEditor().addPropertyChangeListener(new PropertyChangeListener() { public void propertyChange(PropertyChangeEvent e) {
 			if ("date".equals(e.getPropertyName())) {
-				Menu.lbl_dia_semana.setText(new SimpleDateFormat("EEEE").format((Date) e.getNewValue()));
+				Menu.lbl_dia_semana.setText((new SimpleDateFormat("EEEE").format((Date) e.getNewValue())).substring(0,1).toUpperCase() + (new SimpleDateFormat("EEEE").format((Date) e.getNewValue())).substring(1));
             }
 		}});
 		

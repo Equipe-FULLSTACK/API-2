@@ -253,6 +253,7 @@ public class Menu {
 	static JLabel lbl_inicio3 = new JLabel("Inicio", SwingConstants.CENTER);
 	static JLabel lbl_final3 = new JLabel("Final", SwingConstants.CENTER);
 	static JLabel lbl_tarefas3 = new JLabel("Tarefas", SwingConstants.CENTER);
+	static JLabel lbl_datas3 = new JLabel("Entrega", SwingConstants.CENTER);
 	
 	static JLabel lbl_limiar3 = new JLabel("Limiar");
 	static JLabel lbl_media3 = new JLabel("Media: 5.0");
@@ -283,12 +284,24 @@ public class Menu {
 	static JList<String> list_tarefas3 = new JList<>(listTarefas3);
 	static JScrollPane scroll_list_tarefas3 = new JScrollPane(list_tarefas3);
 	
+	static JPanel panel_list_datas3 = new JPanel(new BorderLayout());
+	static DefaultListModel<String> listDatas3 = new DefaultListModel<>();
+	static JList<String> list_datas3 = new JList<>(listDatas3);
+	static JScrollPane scroll_list_datas3 = new JScrollPane(list_datas3);
+	
+	
+	
 	//outros
 	static JTextField txt_limiar3 = new JTextField("6.0");
 	static JPanel panel_divisao2 = new JPanel(new BorderLayout());
 	static JPanel panel_chart = new JPanel(new BorderLayout());
 	
 	static DefaultListModel<String> listAlunos3 = new DefaultListModel<>();
+	static DefaultListModel<String> listAlunos4 = new DefaultListModel<>();
+	static DefaultListModel<String> listEntregas4 = new DefaultListModel<>();
+	static DefaultListModel<String> listNotas4 = new DefaultListModel<>();
+	static DefaultListModel<String> listComentarios4 = new DefaultListModel<>();
+	static DefaultListModel<String> listTarefas4 = new DefaultListModel<>();
 	
 	
 	//OPCOES
@@ -513,7 +526,7 @@ public class Menu {
 		Database.selectAulas(listTurmas2, listInicio2, listFinal2, lbl_dia2.getText());
 		Database.selectTarefas(listTarefas2, AulasTarefas.formatador.format(datepicker_tarefa.getDate()));
 		
-		Database.selectTodasTarefas(Menu.listTarefas3);
+		Database.selectTodasTarefas(Menu.listTarefas3, Menu.listDatas3);
 		
 		btn_carregar2.setEnabled(false);
 		btn_adicionar_aluno1.setEnabled(false);

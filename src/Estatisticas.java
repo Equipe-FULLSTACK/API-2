@@ -10,17 +10,19 @@ import javax.swing.event.ListSelectionListener;
 
 public class Estatisticas {
 	static void definirEstatisticas(int width, int height){
-		Menu.definirLbl (Menu.lbl_dia3,             Menu.pct(width,  2), Menu.pct(height,  9), Menu.pct(width, 22), Menu.pct(height,  8), Menu.fonteBtnTopo);
-		Menu.definirLbl (Menu.lbl_turmas3,          Menu.pct(width,  2), Menu.pct(height, 40), Menu.pct(width, 12), Menu.pct(height,  8), Menu.fonteBtnTopo);
-		Menu.definirLbl (Menu.lbl_inicio3,          Menu.pct(width, 14), Menu.pct(height, 40), Menu.pct(width,  5), Menu.pct(height,  8), Menu.fonteBtnTopo);
-		Menu.definirLbl (Menu.lbl_final3,           Menu.pct(width, 19), Menu.pct(height, 40), Menu.pct(width,  5), Menu.pct(height,  8), Menu.fonteBtnTopo);
-		Menu.definirList(Menu.panel_list_dia3,      Menu.pct(width,  2), Menu.pct(height, 16), Menu.pct(width, 22), Menu.pct(height, 23), Menu.fonteLista, Menu.scroll_list_dia3, Menu.list_dia3);
-		Menu.definirList(Menu.panel_list_turmas3,   Menu.pct(width,  2), Menu.pct(height, 47), Menu.pct(width, 12), Menu.pct(height, 43), Menu.fonteLista, Menu.scroll_list_turmas3, Menu.list_turmas3);
-		Menu.definirList(Menu.panel_list_inicio3,   Menu.pct(width, 14), Menu.pct(height, 47), Menu.pct(width,  5), Menu.pct(height, 43), Menu.fonteLista, Menu.scroll_list_inicio3, Menu.list_inicio3);
-		Menu.definirList(Menu.panel_list_final3,    Menu.pct(width, 19), Menu.pct(height, 47), Menu.pct(width,  5), Menu.pct(height, 43), Menu.fonteLista, Menu.scroll_list_final3, Menu.list_final3);
+		Menu.definirLbl (Menu.lbl_dia3,             Menu.pct(width,  2), Menu.pct(height,  9), Menu.pct(width, 18), Menu.pct(height,  8), Menu.fonteBtnTopo);
+		Menu.definirLbl (Menu.lbl_turmas3,          Menu.pct(width,  2), Menu.pct(height, 40), Menu.pct(width,  8), Menu.pct(height,  8), Menu.fonteBtnTopo);
+		Menu.definirLbl (Menu.lbl_inicio3,          Menu.pct(width, 10), Menu.pct(height, 40), Menu.pct(width,  5), Menu.pct(height,  8), Menu.fonteBtnTopo);
+		Menu.definirLbl (Menu.lbl_final3,           Menu.pct(width, 15), Menu.pct(height, 40), Menu.pct(width,  5), Menu.pct(height,  8), Menu.fonteBtnTopo);
+		Menu.definirList(Menu.panel_list_dia3,      Menu.pct(width,  2), Menu.pct(height, 16), Menu.pct(width, 18), Menu.pct(height, 23), Menu.fonteLista, Menu.scroll_list_dia3, Menu.list_dia3);
+		Menu.definirList(Menu.panel_list_turmas3,   Menu.pct(width,  2), Menu.pct(height, 47), Menu.pct(width,  8), Menu.pct(height, 43), Menu.fonteLista, Menu.scroll_list_turmas3, Menu.list_turmas3);
+		Menu.definirList(Menu.panel_list_inicio3,   Menu.pct(width, 10), Menu.pct(height, 47), Menu.pct(width,  5), Menu.pct(height, 43), Menu.fonteLista, Menu.scroll_list_inicio3, Menu.list_inicio3);
+		Menu.definirList(Menu.panel_list_final3,    Menu.pct(width, 15), Menu.pct(height, 47), Menu.pct(width,  5), Menu.pct(height, 43), Menu.fonteLista, Menu.scroll_list_final3, Menu.list_final3);
 		
-		Menu.definirLbl (Menu.lbl_tarefas3,         Menu.pct(width, 26), Menu.pct(height,  9), Menu.pct(width, 15), Menu.pct(height,  8), Menu.fonteBtnTopo);
-		Menu.definirList(Menu.panel_list_tarefas3,  Menu.pct(width, 26), Menu.pct(height, 16), Menu.pct(width, 15), Menu.pct(height, 74), Menu.fonteLista, Menu.scroll_list_tarefas3, Menu.list_tarefas3);
+		Menu.definirLbl (Menu.lbl_tarefas3,         Menu.pct(width, 22), Menu.pct(height,  9), Menu.pct(width, 11), Menu.pct(height,  8), Menu.fonteBtnTopo);
+		Menu.definirLbl (Menu.lbl_datas3,           Menu.pct(width, 33), Menu.pct(height,  9), Menu.pct(width,  8), Menu.pct(height,  8), Menu.fonteBtnTopo);
+		Menu.definirList(Menu.panel_list_tarefas3,  Menu.pct(width, 22), Menu.pct(height, 16), Menu.pct(width, 11), Menu.pct(height, 74), Menu.fonteLista, Menu.scroll_list_tarefas3, Menu.list_tarefas3);
+		Menu.definirList(Menu.panel_list_datas3,    Menu.pct(width, 33), Menu.pct(height, 16), Menu.pct(width,  8), Menu.pct(height, 74), Menu.fonteLista, Menu.scroll_list_datas3, Menu.list_datas3);
 		
 		Menu.definirPanel(Menu.panel_divisao2,      Menu.pct(width, 42.5), Menu.pct(height, 7.75), 1, Menu.pct(height,  100));
 		Menu.panel_divisao2.setOpaque(true); Menu.panel_divisao2.setBackground(Color.GRAY);
@@ -38,6 +40,7 @@ public class Estatisticas {
 		Menu.lbl_inicio3.setVisible(status);
 		Menu.lbl_final3.setVisible(status);
 		Menu.lbl_tarefas3.setVisible(status);
+		Menu.lbl_datas3.setVisible(status);
 		Menu.lbl_limiar3.setVisible(status);
 		Menu.lbl_media3.setVisible(status);
 		
@@ -46,6 +49,7 @@ public class Estatisticas {
 		Menu.panel_list_inicio3.setVisible(status);
 		Menu.panel_list_final3.setVisible(status);
 		Menu.panel_list_tarefas3.setVisible(status);
+		Menu.panel_list_datas3.setVisible(status);
 		
 		Menu.txt_limiar3.setVisible(status);
 		Menu.panel_divisao2.setVisible(status);
@@ -73,7 +77,20 @@ public class Estatisticas {
 			Menu.list_inicio3.setSelectedIndex(Menu.list_final3.getSelectedIndex());
 			
 			Database.selectAlunosAulas(Menu.listAlunos3, Menu.list_turmas3.getSelectedValue(), Menu.list_dia3.getSelectedValue(), Menu.list_inicio3.getSelectedValue(), Menu.list_final3.getSelectedValue());
-			
+			for (int z = 0; z < Menu.listAlunos3.getSize(); z++){
+				System.out.println(Menu.listAlunos3.getElementAt(z));
+			}
+			Database.selectAlunosTarefasFull2(Menu.listTarefas4, Menu.listAlunos4, Menu.listEntregas4, Menu.listNotas4, Menu.listComentarios4, Menu.list_tarefas3.getSelectedValue());
+			for (int z = 0; z < Menu.listAlunos4.getSize(); z++){
+				System.out.println(Menu.listAlunos4.getElementAt(z));
+			}
+		}});
+		
+		Menu.list_tarefas3.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Menu.list_datas3.setSelectedIndex(Menu.list_tarefas3.getSelectedIndex());
+		}});
+		Menu.list_datas3.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Menu.list_tarefas3.setSelectedIndex(Menu.list_datas3.getSelectedIndex());
 		}});
 	}
 }

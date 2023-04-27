@@ -213,7 +213,7 @@ Equipe FULLSTACK - API 2º Semestre
   ### <p align="center">Diagrama Tabelas Banco de Dados
   
   <p align="center">
-  <img src="/readme/Diagrama-Classes.png" width="610" height="500"><br>
+  <img src="/readme/Tabelas_db.png" width="610" height="500"><br>
   
   <br>
   <br>

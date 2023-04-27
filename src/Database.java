@@ -201,4 +201,17 @@ public class Database {
 			e.printStackTrace();
 		}
 	}
+	public static void selectTodasTarefas(DefaultListModel<String> tarefas){
+		try{
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM tarefas;");
+			tarefas.clear();
+			while (rs.next()) {
+				//String id = rs.getString("id");
+				tarefas.addElement(rs.getString("nome"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }

@@ -3,6 +3,11 @@ import java.awt.BorderLayout;
 
 import java.awt.Color;
 
+import javax.swing.JList;
+import javax.swing.JLabel;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+
 public class Estatisticas {
 	static void definirEstatisticas(int width, int height){
 		Menu.definirLbl (Menu.lbl_dia3,             Menu.pct(width,  2), Menu.pct(height,  9), Menu.pct(width, 22), Menu.pct(height,  8), Menu.fonteBtnTopo);
@@ -47,5 +52,28 @@ public class Estatisticas {
 		Menu.panel_chart.setVisible(status);
 	}
 	static void definirEventos() {
+		Menu.list_dia3.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Database.selectAulas(Menu.listTurmas3, Menu.listInicio3, Menu.listFinal3, Menu.list_dia3.getSelectedValue());
+		}});
+		
+		Menu.list_turmas3.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Menu.list_inicio3.setSelectedIndex(Menu.list_turmas3.getSelectedIndex());
+			Menu.list_final3.setSelectedIndex(Menu.list_turmas3.getSelectedIndex());
+			
+			Database.selectAlunosAulas(Menu.listAlunos3, Menu.list_turmas3.getSelectedValue(), Menu.list_dia3.getSelectedValue(), Menu.list_inicio3.getSelectedValue(), Menu.list_final1.getSelectedValue());
+		}});
+		Menu.list_inicio3.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Menu.list_turmas3.setSelectedIndex(Menu.list_inicio3.getSelectedIndex());
+			Menu.list_final3.setSelectedIndex(Menu.list_inicio3.getSelectedIndex());
+			
+			Database.selectAlunosAulas(Menu.listAlunos3, Menu.list_turmas3.getSelectedValue(), Menu.list_dia3.getSelectedValue(), Menu.list_inicio3.getSelectedValue(), Menu.list_final3.getSelectedValue());
+		}});
+		Menu.list_final3.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
+			Menu.list_turmas3.setSelectedIndex(Menu.list_final3.getSelectedIndex());
+			Menu.list_inicio3.setSelectedIndex(Menu.list_final3.getSelectedIndex());
+			
+			Database.selectAlunosAulas(Menu.listAlunos3, Menu.list_turmas3.getSelectedValue(), Menu.list_dia3.getSelectedValue(), Menu.list_inicio3.getSelectedValue(), Menu.list_final3.getSelectedValue());
+			
+		}});
 	}
 }

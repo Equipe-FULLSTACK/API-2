@@ -288,6 +288,8 @@ public class Menu {
 	static JPanel panel_divisao2 = new JPanel(new BorderLayout());
 	static JPanel panel_chart = new JPanel(new BorderLayout());
 	
+	static DefaultListModel<String> listAlunos3 = new DefaultListModel<>();
+	
 	
 	//OPCOES
 	static JToggleButton tbtn_metal = new JToggleButton("Java");        static JToggleButton tbtn_windows = new JToggleButton("Windows"); 
@@ -402,18 +404,20 @@ public class Menu {
 		DefaultPieDataset dataset = new DefaultPieDataset( );
 		dataset.setValue( "Aprovados" , 10 );
 		dataset.setValue( "Reprovados" , 13 );
-		dataset.setValue( "Nao Atribuidos" , 7 );
+		dataset.setValue( "Nao Entregue" , 7 );
+		dataset.setValue( "Nao Atribuidos" , 3 );
         JFreeChart chart = ChartFactory.createPieChart(null, dataset, true, true, false);
         ChartPanel chartpanel = new ChartPanel(chart);
         //chartpanel.setDomainZoomable(true);
 		
 		PieSectionLabelGenerator labelGenerator = new StandardPieSectionLabelGenerator(  
-			"Alunos {0} : ({2})", new DecimalFormat("0"), new DecimalFormat("0%"));
+			"{0} : ({2})", new DecimalFormat("0"), new DecimalFormat("0%"));
 		PiePlot plot = (PiePlot) chart.getPlot();
 			plot.setLabelGenerator(labelGenerator);
 			plot.setSectionPaint(0, Color.green);
 			plot.setSectionPaint(1, Color.red);
 			plot.setSectionPaint(2, Color.lightGray);
+			plot.setSectionPaint(3, Color.darkGray);
 		
 		obj.add(chartpanel);
 		janela.add(obj);
@@ -504,8 +508,19 @@ public class Menu {
 		Database.connectDatabase();
 		
 		Database.selectAulas(listAulas, listHorarioInicio, listHorarioFinal, lbl_dia2.getText());
-		
 		Database.selectTarefas(listTarefas, AulasTarefas.formatador.format(datepicker_inicio.getDate()));
+		
+		Database.selectAulas(listTurmas2, listInicio2, listFinal2, lbl_dia2.getText());
+		Database.selectTarefas(listTarefas2, AulasTarefas.formatador.format(datepicker_tarefa.getDate()));
+		
+		Database.selectTodasTarefas(Menu.listTarefas3);
+		
+		btn_carregar2.setEnabled(false);
+		btn_adicionar_aluno1.setEnabled(false);
+		btn_adicionar_aluno2.setEnabled(false);
+		btn_remover_aluno1.setEnabled(false);
+		btn_remover_aluno2.setEnabled(false);
+		
 		
 		combo_atualizar_entrega.setEnabled(false);
 		txt_atualizar_nota.setEnabled(false);

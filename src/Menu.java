@@ -93,7 +93,7 @@ public class Menu {
 	static JLabel lbl_dia_semana = new JLabel("Quinta-feira", SwingConstants.CENTER);
 	
 	//textfields, comboboxes
-	static String[] comboAtualizarEntrega = {"", "Entregue", "Nao Entregue"}; static JComboBox<String> combo_atualizar_entrega = new JComboBox<>(comboAtualizarEntrega);
+	static String[] comboAtualizarEntrega = {"Entregue", "Nao Entregue"}; static JComboBox<String> combo_atualizar_entrega = new JComboBox<>(comboAtualizarEntrega);
 	static JTextField txt_atualizar_nota = new JTextField("");
 	
 	//textarea
@@ -436,9 +436,6 @@ public class Menu {
 		estatisticas.definirEventos();
 		opcoes.definirEventos();
 		
-		listAulas.addElement("Escola X - 2o ano B"); listHorarioInicio.addElement("07:10"); listHorarioFinal.addElement("08:50");
-		listAulas.addElement("Escola Y - 3o ano A"); listHorarioInicio.addElement("09:15"); listHorarioFinal.addElement("10:55");
-		
 		janela.setSize(width, height);
 		janela.setLayout(null);
 		janela.setVisible(true);
@@ -483,7 +480,7 @@ public class Menu {
 			}
 		}
 		lbl_dia_semana.setText(LocalDateTime.now().format(diaFormato).substring(0,1).toUpperCase() + LocalDateTime.now().format(diaFormato).substring(1));
-		lbl_dia2.setText(LocalDateTime.now().format(diaFormato));
+		lbl_dia2.setText(LocalDateTime.now().format(diaFormato).substring(0,1).toUpperCase() + LocalDateTime.now().format(diaFormato).substring(1));
 		
 		Timer temporizador = new Timer();
 		temporizador.schedule(new AtualizaTempo(), 0, 1000);
@@ -505,6 +502,15 @@ public class Menu {
 		listDia1.addElement("Domingo");       listDia3.addElement("Domingo");
 		
 		Database.connectDatabase();
-		Database.selectTarefas(listTarefas2, AulasTarefas.formatador.format(datepicker_tarefa.getDate()));
+		
+		Database.selectAulas(listAulas, listHorarioInicio, listHorarioFinal, lbl_dia2.getText());
+		
+		Database.selectTarefas(listTarefas, AulasTarefas.formatador.format(datepicker_inicio.getDate()));
+		
+		combo_atualizar_entrega.setEnabled(false);
+		txt_atualizar_nota.setEnabled(false);
+		txtarea_atualizar_comentario.setEnabled(false);
+		btn_atualizar.setEnabled(false);
+		combo_atualizar_entrega.setSelectedIndex(-1);
 	}
 }

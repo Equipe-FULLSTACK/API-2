@@ -85,8 +85,6 @@ public class Inicio {
 		Menu.list_aulas.setSelectedIndex(i);
 		Menu.list_horario_inicio.setSelectedIndex(i);
 		Menu.list_horario_final.setSelectedIndex(i);
-		
-		//System.out.println(i);
 	}
 	
 	static void definirEventos() {
@@ -97,12 +95,64 @@ public class Inicio {
 			}
 		});
 		
-		//list_tarefas
+		//lists
 		Menu.list_tarefas.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent e) {
-				Menu.listAlunos.clear(); Menu.listEntregas.clear(); Menu.listNotas.clear(); Menu.listComentarios.clear();
+				Database.selectAlunosTarefasFull(Menu.listTarefas, Menu.listAlunos, Menu.listEntregas, Menu.listNotas, Menu.listComentarios, Menu.list_tarefas.getSelectedValue(), AulasTarefas.formatador.format(Menu.datepicker_inicio.getDate()));
 			}
 		});
+		
+		Menu.list_alunos.addListSelectionListener(new ListSelectionListener() {
+			public void valueChanged(ListSelectionEvent e) {
+				Menu.list_entregas.setSelectedIndex(Menu.list_alunos.getSelectedIndex());
+				Menu.list_notas.setSelectedIndex(Menu.list_alunos.getSelectedIndex());
+				Menu.list_comentarios.setSelectedIndex(Menu.list_alunos.getSelectedIndex());
+				
+				if (Menu.list_entregas.getSelectedValue() == "Entregue"){
+					Menu.combo_atualizar_entrega.setSelectedIndex(0);
+				} else {
+					Menu.combo_atualizar_entrega.setSelectedIndex(1);
+				}
+				Menu.txt_atualizar_nota.setText(Menu.list_notas.getSelectedValue());
+				Menu.txtarea_atualizar_comentario.setText(Menu.list_comentarios.getSelectedValue());
+				
+				if (Menu.list_alunos.getSelectedIndex() >= 0){
+					Menu.combo_atualizar_entrega.setEnabled(true);
+					Menu.txt_atualizar_nota.setEnabled(true);
+					Menu.txtarea_atualizar_comentario.setEnabled(true);
+					Menu.btn_atualizar.setEnabled(true);
+				} else {
+					Menu.combo_atualizar_entrega.setEnabled(false);
+					Menu.txt_atualizar_nota.setEnabled(false);
+					Menu.txtarea_atualizar_comentario.setEnabled(false);
+					Menu.btn_atualizar.setEnabled(false);
+				}
+				
+				
+			}
+		});
+		Menu.list_entregas.addListSelectionListener(new ListSelectionListener() {
+			public void valueChanged(ListSelectionEvent e) {
+				Menu.list_alunos.setSelectedIndex(Menu.list_entregas.getSelectedIndex());
+				Menu.list_notas.setSelectedIndex(Menu.list_entregas.getSelectedIndex());
+				Menu.list_comentarios.setSelectedIndex(Menu.list_entregas.getSelectedIndex());
+			}
+		});
+		Menu.list_notas.addListSelectionListener(new ListSelectionListener() {
+			public void valueChanged(ListSelectionEvent e) {
+				Menu.list_entregas.setSelectedIndex(Menu.list_notas.getSelectedIndex());
+				Menu.list_alunos.setSelectedIndex(Menu.list_notas.getSelectedIndex());
+				Menu.list_comentarios.setSelectedIndex(Menu.list_notas.getSelectedIndex());
+			}
+		});
+		Menu.list_comentarios.addListSelectionListener(new ListSelectionListener() {
+			public void valueChanged(ListSelectionEvent e) {
+				Menu.list_entregas.setSelectedIndex(Menu.list_comentarios.getSelectedIndex());
+				Menu.list_notas.setSelectedIndex(Menu.list_comentarios.getSelectedIndex());
+				Menu.list_alunos.setSelectedIndex(Menu.list_comentarios.getSelectedIndex());
+			}
+		});
+		
 		
 		//list_alunostarefas
 		Menu.list_alunos.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
@@ -132,7 +182,11 @@ public class Inicio {
 		Menu.datepicker_inicio.getDateEditor().addPropertyChangeListener(new PropertyChangeListener() { public void propertyChange(PropertyChangeEvent e) {
 			if ("date".equals(e.getPropertyName())) {
 				Menu.lbl_dia_semana.setText((new SimpleDateFormat("EEEE").format((Date) e.getNewValue())).substring(0,1).toUpperCase() + (new SimpleDateFormat("EEEE").format((Date) e.getNewValue())).substring(1));
-            }
+				
+				Database.selectAulas(Menu.listAulas, Menu.listHorarioInicio, Menu.listHorarioFinal, Menu.lbl_dia_semana.getText());
+			
+				Database.selectTarefas(Menu.listTarefas, AulasTarefas.formatador.format(Menu.datepicker_inicio.getDate()));
+			}
 		}});
 		
 	}

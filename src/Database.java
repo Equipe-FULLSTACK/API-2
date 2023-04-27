@@ -158,4 +158,38 @@ public class Database {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void selectAlunosTarefasFull(DefaultListModel<String> tarefas, DefaultListModel<String> alunos, DefaultListModel<String> entregas, DefaultListModel<String> notas, DefaultListModel<String> comentarios, String nome, String data_entrega){
+		try{
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM alunos_tarefas WHERE id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + nome + "' AND data_entrega = '" + data_entrega + "');");
+			alunos.clear();
+			entregas.clear();
+			notas.clear();
+			comentarios.clear();
+			while (rs.next()) {
+				alunos.addElement(rs.getString("nome"));
+				String data_entrega2 = rs.getString("data_entrega");
+				if (data_entrega2 == null || data_entrega2 == "") {
+					entregas.addElement("Nao entregue");
+				} else {
+					entregas.addElement(data_entrega2);
+				}
+				String nota2 = rs.getString("nota");
+				if (nota2 == null || nota2 == "") {
+					notas.addElement(" ");
+				} else {
+					notas.addElement(nota2);
+				}
+				String comentarios2 = rs.getString("comentarios");
+				if (comentarios2 == null || comentarios2 == "") {
+					comentarios.addElement(" ");
+				} else {
+					comentarios.addElement(comentarios2);
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }

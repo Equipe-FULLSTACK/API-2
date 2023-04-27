@@ -151,6 +151,7 @@ public class AulasTarefas {
 				Database.insertAula(Menu.txt_turmas1.getText(), Menu.list_dia1.getSelectedValue(), Menu.txt_inicio1.getText(), Menu.txt_final1.getText());
 				
 				Database.selectAulas(Menu.listTurmas1, Menu.listInicio1, Menu.listFinal1, Menu.list_dia1.getSelectedValue());
+				Database.selectAulas(Menu.listTurmas2, Menu.listInicio2, Menu.listFinal2, Menu.lbl_dia2.getText());
 			}
 		});
 		//btn_remover_aula1
@@ -160,6 +161,7 @@ public class AulasTarefas {
 				Database.deleteAula(Menu.list_turmas1.getSelectedValue(), Menu.list_dia1.getSelectedValue(), Menu.list_inicio1.getSelectedValue(), Menu.list_final1.getSelectedValue());
 				
 				Database.selectAulas(Menu.listTurmas1, Menu.listInicio1, Menu.listFinal1, Menu.list_dia1.getSelectedValue());
+				Database.selectAulas(Menu.listTurmas2, Menu.listInicio2, Menu.listFinal2, Menu.lbl_dia2.getText());
 			}
 		});
 		

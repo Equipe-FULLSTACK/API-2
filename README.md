@@ -278,6 +278,8 @@ As estatísticas serão apresentadas no formato de gráfico de pizza, contendo i
 
 ### <p align = "center">![image](https://user-images.githubusercontent.com/125655127/233860802-684291fb-5e86-4f63-b877-b902f0926ec2.png)
 
+  <div align="center"> <img src="/readme/Pag_Principal "width="640" height="360"> </div>
+
 
 
 

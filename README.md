@@ -11,6 +11,7 @@ Equipe FULLSTACK - API 2º Semestre
   #### <div align="center"> Estado Atual do Projeto: </div>
   
   <div align="center"> <img src="/readme/Pag_Principal "width="640" height="360"> </div>
+  <div align="center"> <img src="/readme/layout_aulas_tarefas "width="640" height="360"> </div>
   <div align="center"> <img src="/readme/estilos.gif "width="640" height="360"> </div>
   
   

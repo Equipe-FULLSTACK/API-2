@@ -192,4 +192,13 @@ public class Database {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void updateAlunosTarefas(String data, String nota, String comentario, String nome, String data_entrega, String aluno){
+		try{
+			Statement stmt = conn.createStatement();
+			stmt.executeUpdate("UPDATE alunos_tarefas SET data_entrega = '" + data + "', nota = " + nota + ", comentarios = '" + comentario + "' WHERE id_tarefa =  (SELECT id FROM tarefas WHERE nome = '" + nome + "' AND data_entrega = '" + data_entrega + "') AND nome = '" + aluno + "';");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }

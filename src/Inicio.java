@@ -92,6 +92,12 @@ public class Inicio {
 		Menu.btn_atualizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Atualizando");
+				if (Menu.combo_atualizar_entrega.getSelectedIndex() == 0){
+					Database.updateAlunosTarefas(Menu.lbl_data.getText(), Menu.txt_atualizar_nota.getText(), Menu.txtarea_atualizar_comentario.getText(), Menu.list_tarefas.getSelectedValue(), AulasTarefas.formatador.format(Menu.datepicker_inicio.getDate()), Menu.list_alunos.getSelectedValue());
+				} else {
+					Database.updateAlunosTarefas("", Menu.txt_atualizar_nota.getText(), Menu.txtarea_atualizar_comentario.getText(), Menu.list_tarefas.getSelectedValue(), AulasTarefas.formatador.format(Menu.datepicker_inicio.getDate()), Menu.list_alunos.getSelectedValue());
+				}
+				Database.selectAlunosTarefasFull(Menu.listTarefas, Menu.listAlunos, Menu.listEntregas, Menu.listNotas, Menu.listComentarios, Menu.list_tarefas.getSelectedValue(), AulasTarefas.formatador.format(Menu.datepicker_inicio.getDate()));
 			}
 		});
 		
@@ -99,6 +105,7 @@ public class Inicio {
 		Menu.list_tarefas.addListSelectionListener(new ListSelectionListener() {
 			public void valueChanged(ListSelectionEvent e) {
 				Database.selectAlunosTarefasFull(Menu.listTarefas, Menu.listAlunos, Menu.listEntregas, Menu.listNotas, Menu.listComentarios, Menu.list_tarefas.getSelectedValue(), AulasTarefas.formatador.format(Menu.datepicker_inicio.getDate()));
+			
 			}
 		});
 		
@@ -108,7 +115,8 @@ public class Inicio {
 				Menu.list_notas.setSelectedIndex(Menu.list_alunos.getSelectedIndex());
 				Menu.list_comentarios.setSelectedIndex(Menu.list_alunos.getSelectedIndex());
 				
-				if (Menu.list_entregas.getSelectedValue() == "Entregue"){
+				System.out.println(Menu.list_entregas.getSelectedValue());
+				if (Menu.list_entregas.getSelectedValue() != "Nao entregue"){
 					Menu.combo_atualizar_entrega.setSelectedIndex(0);
 				} else {
 					Menu.combo_atualizar_entrega.setSelectedIndex(1);

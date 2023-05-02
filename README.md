@@ -138,3 +138,13 @@ Equipe FULLSTACK - API 2º Semestre
   <br>
   <br>
   
+  # <p align="center">SPRINTS
+  
+  ## <a href="https://github.com/Equipe-FULLSTACK/API-2/tree/Sprint1">Primeira Sprint</a>
+  ## <br>
+  ## <a href="https://github.com/Equipe-FULLSTACK/API-2/tree/Sprint2">Segunda Sprint</a>
+  ## <br>
+  ## <a href="https://github.com/Equipe-FULLSTACK/API-2/tree/Sprint3">Terceira Sprint</a>
+  ## <br>
+  ## <a href="https://github.com/Equipe-FULLSTACK/API-2/tree/Sprint4">Quarta Sprint</a>
+  

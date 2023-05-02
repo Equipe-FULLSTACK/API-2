@@ -48,6 +48,17 @@ As estatísticas serão apresentadas no formato de gráfico de pizza, contendo i
 
 
 ### <p align = "center">![image](https://user-images.githubusercontent.com/125655127/233860802-684291fb-5e86-4f63-b877-b902f0926ec2.png)
+  
+  
+  # <p align="center">SPRINTS
+  
+  ## <a href="https://github.com/Equipe-FULLSTACK/API-2/tree/Sprint1">Primeira Sprint</a>
+  ## <br>
+  ## <a href="https://github.com/Equipe-FULLSTACK/API-2/tree/Sprint2">Segunda Sprint</a>
+  ## <br>
+  ## <a href="https://github.com/Equipe-FULLSTACK/API-2/tree/Sprint3">Terceira Sprint</a>
+  ## <br>
+  ## <a href="https://github.com/Equipe-FULLSTACK/API-2/tree/Sprint4">Quarta Sprint</a>
 
 
 

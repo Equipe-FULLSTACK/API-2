@@ -192,39 +192,7 @@ public class Database {
 			e.printStackTrace();
 		}
 	}
-	public static void selectAlunosTarefasFull2(DefaultListModel<String> tarefas, DefaultListModel<String> alunos, DefaultListModel<String> entregas, DefaultListModel<String> notas, DefaultListModel<String> comentarios, String nome){
-		try{
-			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT * FROM alunos_tarefas WHERE id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + nome + "');");
-			alunos.clear();
-			entregas.clear();
-			notas.clear();
-			comentarios.clear();
-			while (rs.next()) {
-				alunos.addElement(rs.getString("nome"));
-				String data_entrega2 = rs.getString("data_entrega");
-				if (data_entrega2 == null || data_entrega2 == "") {
-					entregas.addElement("Nao entregue");
-				} else {
-					entregas.addElement(data_entrega2);
-				}
-				String nota2 = rs.getString("nota");
-				if (nota2 == null || nota2 == "") {
-					notas.addElement(" ");
-				} else {
-					notas.addElement(nota2);
-				}
-				String comentarios2 = rs.getString("comentarios");
-				if (comentarios2 == null || comentarios2 == "") {
-					comentarios.addElement(" ");
-				} else {
-					comentarios.addElement(comentarios2);
-				}
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
+	
 	
 	public static void updateAlunosTarefas(String data, String nota, String comentario, String nome, String data_entrega, String aluno){
 		try{
@@ -247,5 +215,58 @@ public class Database {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static int selectTotalTarefas(String nome, String data_entrega){
+		int z = 0;
+		try{
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE nome = '" + nome + "' AND data_entrega = '" + data_entrega + "';");
+			while (rs.next()) {
+				z = rs.getInt("total");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return z;
+	}
+	public static int selectAprovados(double n, String nome, String data_entrega){
+		int z = 0;
+		try{
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE nota > " + n + " AND id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + nome + "' AND data_entrega = '" + data_entrega + "');");
+			while (rs.next()) {
+				z = rs.getInt("total");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return z;
+	}
+	public static int selectEntregues(String nome, String data_entrega){
+		int z = 0;
+		try{
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE data_entrega IS NOT NULL AND NOT data_entrega = '' AND id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + nome + "' AND data_entrega = '" + data_entrega + "');");
+			while (rs.next()) {
+				z = rs.getInt("total");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return z;
+	}
+	public static int selectTotalAulas(String nome, String dia){
+		int z = 0;
+		try{
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_aulas WHERE id_aula = (SELECT id FROM aulas WHERE nome = '" + nome + "' AND dia = '" + dia + "');");
+			while (rs.next()) {
+				z = rs.getInt("total");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return z;
 	}
 }

@@ -302,6 +302,12 @@ public class Menu {
 	static DefaultListModel<String> listNotas4 = new DefaultListModel<>();
 	static DefaultListModel<String> listComentarios4 = new DefaultListModel<>();
 	static DefaultListModel<String> listTarefas4 = new DefaultListModel<>();
+	static DefaultListModel<String> listMutual = new DefaultListModel<>();
+	
+	static int aprovados = 0;
+	static int reprovados = 0;
+	static int nentregues = 0;
+	static int natribuidos = 0;
 	
 	
 	//OPCOES
@@ -410,15 +416,15 @@ public class Menu {
 		obj.setBounds(x, y, w, h);
 		janela.add(obj);
 	}
-	static void definirGrafico(JPanel obj, int x, int y, int w, int h){
+	static void definirGrafico(JPanel obj, int x, int y, int w, int h, int aprovados, int reprovados, int nentregues, int natribuidos){
 		obj.removeAll();
 		obj.setBounds(x, y, w, h);
 		
 		DefaultPieDataset dataset = new DefaultPieDataset( );
-		dataset.setValue( "Aprovados" , 10 );
-		dataset.setValue( "Reprovados" , 13 );
-		dataset.setValue( "Nao Entregue" , 7 );
-		dataset.setValue( "Nao Atribuidos" , 3 );
+		dataset.setValue( "Aprovados" , aprovados );
+		dataset.setValue( "Reprovados" , reprovados );
+		dataset.setValue( "Nao Entregue" , nentregues );
+		dataset.setValue( "Nao Atribuidos" , natribuidos );
         JFreeChart chart = ChartFactory.createPieChart(null, dataset, true, true, false);
         ChartPanel chartpanel = new ChartPanel(chart);
         //chartpanel.setDomainZoomable(true);

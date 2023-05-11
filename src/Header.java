@@ -30,6 +30,8 @@ public class Header {
 			public void actionPerformed(ActionEvent e){  
 				Menu.tbtn_inicio.setSelected(false); Menu.tbtn_aulastarefas.setSelected(false); Menu.tbtn_estatisticas.setSelected(true); Menu.tbtn_opcoes.setSelected(false);
 				inicio.definirVisivel(false); aulastarefas.definirVisivel(false); estatisticas.definirVisivel(true); opcoes.definirVisivel(false);
+				
+				Database.selectTodasTarefas(Menu.listTarefas3, Menu.listDatas3);
 			}  
 		});
 		Menu.tbtn_opcoes.addActionListener(new ActionListener(){  

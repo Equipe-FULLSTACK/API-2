@@ -207,6 +207,7 @@ public class Database {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT * FROM tarefas;");
 			tarefas.clear();
+			datas.clear();
 			while (rs.next()) {
 				//String id = rs.getString("id");
 				tarefas.addElement(rs.getString("nome"));
@@ -217,11 +218,12 @@ public class Database {
 		}
 	}
 	
+	/*
 	public static int selectTotalTarefas(String nome, String data_entrega){
 		int z = 0;
 		try{
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE nome = '" + nome + "' AND data_entrega = '" + data_entrega + "';");
+			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + nome + "' AND data_entrega = '" + data_entrega + "');");
 			while (rs.next()) {
 				z = rs.getInt("total");
 			}
@@ -234,7 +236,7 @@ public class Database {
 		int z = 0;
 		try{
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE nota > " + n + " AND id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + nome + "' AND data_entrega = '" + data_entrega + "');");
+			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE nota >= " + n + " AND id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + nome + "' AND data_entrega = '" + data_entrega + "');");
 			while (rs.next()) {
 				z = rs.getInt("total");
 			}
@@ -243,11 +245,24 @@ public class Database {
 		}
 		return z;
 	}
-	public static int selectEntregues(String nome, String data_entrega){
+	public static int selectReprovados(double n, String nome, String data_entrega){
 		int z = 0;
 		try{
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE data_entrega IS NOT NULL AND NOT data_entrega = '' AND id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + nome + "' AND data_entrega = '" + data_entrega + "');");
+			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE nota < " + n + " AND id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + nome + "' AND data_entrega = '" + data_entrega + "');");
+			while (rs.next()) {
+				z = rs.getInt("total");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return z;
+	}
+	public static int selectNaoEntregues(String nome, String data_entrega){
+		int z = 0;
+		try{
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE (data_entrega IS NULL OR data_entrega = '') AND id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + nome + "' AND data_entrega = '" + data_entrega + "');");
 			while (rs.next()) {
 				z = rs.getInt("total");
 			}
@@ -261,6 +276,47 @@ public class Database {
 		try{
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_aulas WHERE id_aula = (SELECT id FROM aulas WHERE nome = '" + nome + "' AND dia = '" + dia + "');");
+			while (rs.next()) {
+				z = rs.getInt("total");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return z;
+	}
+	*/
+	
+	public static int selectAprovado(String nome, double n, String tarefa, String data_entrega){
+		int z = 0;
+		try{
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE nome = '" + nome + "' AND nota >= " + n + " AND id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + tarefa + "' AND data_entrega = '" + data_entrega + "');");
+			while (rs.next()) {
+				z = rs.getInt("total");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return z;
+	}
+	public static int selectReprovado(String nome, double n, String tarefa, String data_entrega){
+		int z = 0;
+		try{
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE nome = '" + nome + "' AND nota < " + n + " AND id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + tarefa + "' AND data_entrega = '" + data_entrega + "');");
+			while (rs.next()) {
+				z = rs.getInt("total");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return z;
+	}
+	public static int selectNaoEntregue(String nome, String tarefa, String data_entrega){
+		int z = 0;
+		try{
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM alunos_tarefas WHERE nome = '" + nome + "' AND (data_entrega IS NULL OR data_entrega = '') AND id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + tarefa + "' AND data_entrega = '" + data_entrega + "');");
 			while (rs.next()) {
 				z = rs.getInt("total");
 			}

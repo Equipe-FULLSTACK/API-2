@@ -59,6 +59,11 @@ public class Estatisticas {
 	static void definirEventos() {
 		Menu.list_dia3.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
 			Database.selectAulas(Menu.listTurmas3, Menu.listInicio3, Menu.listFinal3, Menu.list_dia3.getSelectedValue());
+			
+			Menu.list_turmas3.clearSelection(); Menu.list_inicio3.clearSelection();  Menu.list_final3.clearSelection();
+			Menu.list_tarefas3.clearSelection(); Menu.list_datas3.clearSelection();
+			
+			definirListasGraficos();
 		}});
 		
 		Menu.list_turmas3.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
@@ -93,27 +98,38 @@ public class Estatisticas {
 		
 		
 		Database.selectAlunosAulas(Menu.listAlunos3, Menu.list_turmas3.getSelectedValue(), Menu.list_dia3.getSelectedValue(), Menu.list_inicio3.getSelectedValue(), Menu.list_final3.getSelectedValue());
-		for (int z = 0; z < Menu.listAlunos3.getSize(); z++){
+		/*for (int z = 0; z < Menu.listAlunos3.getSize(); z++){
 			System.out.println(Menu.listAlunos3.getElementAt(z));
 		}
-		System.out.println(" ");
+		System.out.println(" ");*/
 		Database.selectAlunosTarefasFull(Menu.listTarefas4, Menu.listAlunos4, Menu.listEntregas4, Menu.listNotas4, Menu.listComentarios4, Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue());
-		for (int z = 0; z < Menu.listAlunos4.getSize(); z++){
+		/*for (int z = 0; z < Menu.listAlunos4.getSize(); z++){
 			System.out.println(Menu.listAlunos4.getElementAt(z));
 		}
-		System.out.println(" ");
+		System.out.println(" ");*/
 		Menu.listMutual = selectMutual(Menu.listAlunos3, Menu.listAlunos4);
+		
+		int total = Menu.listMutual.getSize();
+		Menu.natribuidos = Menu.listAlunos3.getSize() - total;
+		Menu.aprovados = 0; Menu.reprovados = 0; Menu.nentregues = 0;
 		for (int z = 0; z < Menu.listMutual.getSize(); z++){
-			System.out.println(Menu.listMutual.getElementAt(z));
+			//System.out.println(Menu.listMutual.getElementAt(z));
+			if (Database.selectAprovado(Menu.listMutual.getElementAt(z), 6.0, Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue()) > 0) {
+				Menu.aprovados++;
+			} else if (Database.selectReprovado(Menu.listMutual.getElementAt(z), 6.0, Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue()) > 0){
+				Menu.reprovados++;
+			} else { //if (Database.selectNaoEntregue(Menu.listMutual.getElementAt(z), Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue()) > 0)
+				Menu.nentregues++;
+			}
 		}
 		System.out.println("===");
-		
-		
+		/*
 		int total = Database.selectTotalTarefas(Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue());
 		Menu.aprovados = Database.selectAprovados(6.0, Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue());
-		Menu.reprovados = total - Menu.aprovados;
-		Menu.nentregues = total - Database.selectTotalTarefas(Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue());
+		Menu.reprovados = Database.selectReprovados(6.0, Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue());
+		Menu.nentregues = Database.selectNaoEntregues(Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue());
 		Menu.natribuidos = Database.selectTotalAulas(Menu.list_turmas3.getSelectedValue(), Menu.list_dia3.getSelectedValue()) - total;
+		*/
 		
 		int height = Menu.janela.getBounds().getSize().height; int width = Menu.janela.getBounds().getSize().width;
 		Menu.definirGrafico(Menu.panel_chart,       Menu.pct(width, 44), Menu.pct(height, 17), Menu.pct(width, 53), Menu.pct(height, 73), Menu.aprovados, Menu.reprovados, Menu.nentregues, Menu.natribuidos);

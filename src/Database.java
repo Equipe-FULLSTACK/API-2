@@ -325,4 +325,18 @@ public class Database {
 		}
 		return z;
 	}
+	
+	public static int selectNota(String nome, String tarefa, String data_entrega){
+		int z = 0;
+		try{
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT nota AS total FROM alunos_tarefas WHERE nome = '" + nome + "' AND nota >= 0 AND id_tarefa = (SELECT id FROM tarefas WHERE nome = '" + tarefa + "' AND data_entrega = '" + data_entrega + "');");
+			while (rs.next()) {
+				z = rs.getInt("total");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return z;
+	}
 }

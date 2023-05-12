@@ -256,7 +256,7 @@ public class Menu {
 	static JLabel lbl_datas3 = new JLabel("Entrega", SwingConstants.CENTER);
 	
 	static JLabel lbl_limiar3 = new JLabel("Limiar");
-	static JLabel lbl_media3 = new JLabel("Media: 5.0");
+	static JLabel lbl_media3 = new JLabel("Media: ");
 	
 	//listboxes
 	static JPanel panel_list_dia3 = new JPanel(new BorderLayout());

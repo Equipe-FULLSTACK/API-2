@@ -7,6 +7,8 @@ import javax.swing.JList;
 import javax.swing.JLabel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.DefaultListModel;
 
 public class Estatisticas {
@@ -57,6 +59,18 @@ public class Estatisticas {
 		Menu.panel_chart.setVisible(status);
 	}
 	static void definirEventos() {
+		Menu.txt_limiar3.getDocument().addDocumentListener(new DocumentListener() {
+			public void changedUpdate(DocumentEvent e) {
+				definirListasGraficos();
+			}
+			 public void removeUpdate(DocumentEvent e) {
+				definirListasGraficos();
+			}
+			public void insertUpdate(DocumentEvent e) {
+				definirListasGraficos();
+			}
+		});
+		
 		Menu.list_dia3.addListSelectionListener(new ListSelectionListener() { public void valueChanged(ListSelectionEvent e) {
 			Database.selectAulas(Menu.listTurmas3, Menu.listInicio3, Menu.listFinal3, Menu.list_dia3.getSelectedValue());
 			
@@ -110,17 +124,22 @@ public class Estatisticas {
 		Menu.listMutual = selectMutual(Menu.listAlunos3, Menu.listAlunos4);
 		
 		int total = Menu.listMutual.getSize();
+		double nota_total = 0; Menu.lbl_media3.setText("Media: ");
 		Menu.natribuidos = Menu.listAlunos3.getSize() - total;
 		Menu.aprovados = 0; Menu.reprovados = 0; Menu.nentregues = 0;
 		for (int z = 0; z < Menu.listMutual.getSize(); z++){
 			//System.out.println(Menu.listMutual.getElementAt(z));
-			if (Database.selectAprovado(Menu.listMutual.getElementAt(z), 6.0, Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue()) > 0) {
+			if (Database.selectAprovado(Menu.listMutual.getElementAt(z), Double.valueOf(Menu.txt_limiar3.getText()), Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue()) > 0) {
 				Menu.aprovados++;
-			} else if (Database.selectReprovado(Menu.listMutual.getElementAt(z), 6.0, Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue()) > 0){
+				nota_total += Database.selectNota(Menu.listMutual.getElementAt(z), Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue());
+			} else if (Database.selectReprovado(Menu.listMutual.getElementAt(z), Double.valueOf(Menu.txt_limiar3.getText()), Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue()) > 0){
 				Menu.reprovados++;
+				nota_total += Database.selectNota(Menu.listMutual.getElementAt(z), Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue());
 			} else { //if (Database.selectNaoEntregue(Menu.listMutual.getElementAt(z), Menu.list_tarefas3.getSelectedValue(), Menu.list_datas3.getSelectedValue()) > 0)
 				Menu.nentregues++;
 			}
+			
+			Menu.lbl_media3.setText("Media: " + nota_total/z);
 		}
 		System.out.println("===");
 		/*
@@ -133,6 +152,7 @@ public class Estatisticas {
 		
 		int height = Menu.janela.getBounds().getSize().height; int width = Menu.janela.getBounds().getSize().width;
 		Menu.definirGrafico(Menu.panel_chart,       Menu.pct(width, 44), Menu.pct(height, 17), Menu.pct(width, 53), Menu.pct(height, 73), Menu.aprovados, Menu.reprovados, Menu.nentregues, Menu.natribuidos);
+		
 	}
 	
 	static DefaultListModel<String> selectMutual(DefaultListModel<String> list1, DefaultListModel<String> list2) {

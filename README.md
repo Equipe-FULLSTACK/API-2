@@ -42,6 +42,7 @@ Equipe FULLSTACK - API 2º Semestre
   
   <div align="center"> <img src="/readme/Pag_Principal "width="640" height="360"> </div>
   <div align="center"> <img src="/readme/layout_aula_tarefas.png "width="640" height="360"> </div>
+  <div align="center"> <img src="/readme/Pag_Estatisticas.png "width="640" height="360"> </div>
   <div align="center"> <img src="/readme/estilos.gif "width="640" height="360"> </div>
 
  

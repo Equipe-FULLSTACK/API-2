@@ -2,7 +2,7 @@
 Equipe FULLSTACK - API 2º Semestre
 ==================================
 **********************************
-  Terceira Sprint - 23/04/2023
+  Terceira Sprint - 14/05/2023
   ============================
   ****************************
 ###  <div align="center"> Projeto API 2º Semestre: </div>
@@ -20,22 +20,11 @@ Equipe FULLSTACK - API 2º Semestre
 
  
  
-A Sprint teve inicio na data de 03/04/2023. Foi criado um banco de dados no Apache NetBeans juntamente com H2 para a implementação de dados como: aulas, alunos, tarefas e estatísticas.
+A Sprint teve inicio na data de 23/04/2023. Onde, Ao longo da Sprint foram desenvolvidas as seguintes propostas:
 
-
-
-
-
-
-Ao longo da Sprint, foi feito um levantamento de requisitos e implementadas novas funções para o projeto, como:
-
-
-- Opção de remoção de alunos antigos das aulas.
-- Funçoes de remoção de aulas. 
-- Funçoes de inserção ou remoção de novas atividades.
-- Funçoes de remoção e cadastro de alunos em aulas.
-- Funçoes de inserção ou remoção de novos alunos.
-- Função para remoção de alunos antigos das aulas.
+- Desenvolvimento da tela de Estatísticas e suas funcionalidades integradas ao Banco de dados.
+- Correções de Bugs gerais.
+- Aprimoramento e manutenção de features.
 
   <div align="center"> <img src="/readme/Pag_Principal "width="640" height="360"> </div>
 

@@ -34,51 +34,56 @@ Equipe FULLSTACK - API 2º Semestre
   <br>
 
 
-  - Criação da GUI
-  - Desenvolvimento da Interface da Tela principal
-  - Implementação de botões de acesso as abas de: atividades, estatisticas, alunos e aulas
-  - Desenvolvimento do layout da tela de alunos
-  - Implementação para funçoes de inserção ou remoção de novos alunos
-  - Criação dos códigos em java para a classe alunos
-  - Desenvolvimento do layout da tela de aulas
-  - Implementação para funçoes de remoção e cadastro de alunos em aulas
-  - Criação dos códigos em java para a classe aulas
-  - Implementação do layout para cadastrar novas aulas
-  - Desenvolvimento do layout da tela de atividades
-  - Criação dos códigos em java para a classe atividades
-  - Modelagem do banco de dados
-  - Desenvolvimento da aplicação de Integração com banco de dados
+  - Criação da GUI.
+  - Desenvolvimento da interface da tela principal. 
+  - Implementação de botões de acesso as abas de atividades, estatísticas, alunos e aulas. 
+  - Desenvolvimento layout da tela de alunos. 
+  - Implementação de funções inserção ou remoção de novos alunos. 
+  - Criação dos códigos em Java para a classe alunos. 
+  - Desenvolvimento do layout da tela de aulas. 
+  - Implementação das funções de remoção e cadastro dos alunos em aulas. 
+  - Criação dos códigos Java para a classe aulas. 
+  - Implementação do layout de cadastro para novas aulas. 
+  - Desenvolvimento do layout da tela de atividades. 
+  - Criação dos códigos em Java para a classe atividades. 
+  - Modelagem do banco de dados. 
+  - Desenvolvimento da aplicação de Integração com banco de dados. 
   
   <br>
   
   <br>
   
-  Ao longo desta Sprint, foi planejada como seria a estrutura final da funcionalidade da aplicação,
-  onde, por consenso da equipe, foi definida a estrutura por meio de que a aplicação operaria. Determinando
-  como seria a estrutura de dados entre as classes do sistema, e, quais funções a serem realizadas por estas.
+  Ao longo desta Sprint, foi planejada como seria a estrutura final das funcionalidades da
+  aplicação, onde, por consenso da equipe, foi definida a estrutura funcional da aplicação. 
+  Determinando a estrutura de dados entre as classes do sistema, e suas devidas funções a
+  serem realizadas.
   
-  Com base nisso, foi elaborado o layout da Interface Gráfica, de modo em que o usuário possa acessar as seguintes funcionalidades:
-  - Próximas Atividades para o dia
-  - Aulas
-  - Atividades
-  - Estatísticas
+  Com base nesse escopo, foi desenvolvido o designer da interface gráfica. Deste modo, o
+  usuário pode acessar as funcionalidades do software, dentre elas:
+  
+  - Próximas atividades para o dia. 
+  - Aulas. 
+  - Atividades. 
+  - Estatísticas. 
     
-  Elaborada a Interface Gráfica do Usuário, foi definido quais as seriam funcionalidades que o usuário precisaria utilizar para que 
-  a aplicação retornasse as informações que deseja. E, de que modo o cliente poderia acessar tais funcionalidades. Com isso em mente,
-  foi projetado o layout das abas de: Inicio, Aulas, Atividades e Estatísticas. Com a estrutura pronta para que seja capaz de fornecer
-  os dados que sejam mais essenciais ao cliente.
+  Desenvolvida interface gráfica do usuário, definido quais seriam as ações necessárias para que 
+  operador do sistema interagisse na aquisição das informações desejadas, e de que modo o
+  cliente possa acessar os dados contidos no sistema.
   
-  Disto, foi então desenvolvido o código para as classes que compunham o sistema, contendo os atributos necessários de informação de
-  cada uma. Além das funções basicas para criação de novas entidades, que possibilitam a gravação dos atributos em um banco de dados.
   
-  Por fim, foram então desenvolvidos os códigos necessários para que fosse feita a conexão do sistema com um banco de dados local. De
-  forma que, criando a estrutura das tabelas de informações, já seria possível o armazenamento de informações no banco de dados.
+  Desenvolvida interface gráfica do usuário, definido quais seriam as ações necessárias para que
+  operador do sistema interagisse na aquisição das informações desejadas, e de que modo o
+  cliente possa acessar os dados contidos no sistema.
   
-  Por isso, foram então feitos diferentes diagramas para representar como as estruturas de informação estariam dispostas no sistema.
+  Em posse desses dados, foi criado o escopo de desenvolvimento das abas:” Início, aulas, 
+  atividades e estatísticas”, e com isso a programação das classes fazem parte do sistema proposto.  
   
-  Inicialmente montou-se um modelo conceitual da estrutura de dados, informando sobre todas as entidades que
-  participariam da infraestrutura do banco de dados, e quais atributos cada uma possuiria.
-    
+  Ao modelar o sistema, foi gerado interação com banco dados usando, modelagem de conexões com dados 
+  instalados localmente. Após essa etapa, é possível a inserção de parâmetros no banco de dados.
+  
+  Para organização, planejamento e execução do projeto, foi elaborado os diagramas norteando 
+  aos desenvolvedores programação do sistema.  
+  
   ### <p align="center">Diagrama Entidade Relacionamento
   
   <p align="center">

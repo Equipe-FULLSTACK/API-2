@@ -98,7 +98,7 @@ Equipe FULLSTACK - API 2º Semestre
   ### <p align="center">Diagrama UML
     
   <p align="center">
-  <img src="/readme/Diagrama_Atualizado.png" width="520" height="600"><br>
+  <img src="/readme/Diagrama_Atualizado.jpg" width="520" height="600"><br>
     
   <br>
   <br>

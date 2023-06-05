@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="src">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/flatlaf-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/jfreechart-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/h2-2.1.214.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/jcommon-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/jcalendar-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

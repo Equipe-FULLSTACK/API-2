@@ -10,7 +10,7 @@ public class Database {
 	static Connection conn;
 	
 	public static void connectDatabase(){
-		String jdbcURL = "jdbc:h2:~/api";
+		String jdbcURL = "jdbc:h2:./src/api";
 		String username = "sa";
 		String password = "";                
            

@@ -31,7 +31,7 @@ public class Database {
 			hora_inicio.clear();
 			hora_final.clear();
 			while (rs.next()) {
-				//String id = rs.getString("id");
+				String id = rs.getString("id");
 				turma.addElement(rs.getString("nome"));
 				hora_inicio.addElement(rs.getString("inicio"));
 				hora_final.addElement(rs.getString("final"));
@@ -92,7 +92,7 @@ public class Database {
 			ResultSet rs = stmt.executeQuery("SELECT * FROM tarefas WHERE data_entrega = '" + data_entrega + "';");
 			tarefas.clear();
 			while (rs.next()) {
-				//String id = rs.getString("id");
+				String id = rs.getString("id");
 				tarefas.addElement(rs.getString("nome"));
 			}
 		} catch (SQLException e) {
@@ -209,7 +209,7 @@ public class Database {
 			tarefas.clear();
 			datas.clear();
 			while (rs.next()) {
-				//String id = rs.getString("id");
+				String id = rs.getString("id");
 				tarefas.addElement(rs.getString("nome"));
 				datas.addElement(rs.getString("data_entrega"));
 			}
@@ -218,7 +218,7 @@ public class Database {
 		}
 	}
 	
-	/*
+
 	public static int selectTotalTarefas(String nome, String data_entrega){
 		int z = 0;
 		try{
@@ -284,7 +284,7 @@ public class Database {
 		}
 		return z;
 	}
-	*/
+
 	
 	public static int selectAprovado(String nome, double n, String tarefa, String data_entrega){
 		int z = 0;

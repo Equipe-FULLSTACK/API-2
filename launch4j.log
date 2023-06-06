@@ -1,0 +1,38 @@
+
+
+Version:	3.50
+CmdLine:	C:\Users\PC\Documents\GitHub\API-2\App.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	C:\Users\PC\Documents\GitHub\API-2\.
+Requires JDK:	No
+Requires 64-Bit: No
+Java min ver:	1.001.000
+Java max ver:	
+Substitute:	JAVA_HOME = 
+Substitute:	PATH = C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Users\PC\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin;;C:\Users\PC\AppData\Local\GitHubDesktop\bin;C:\Users\PC\AppData\Local\Programs\Microsoft VS Code\bin
+JRE paths:	;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Users\PC\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin;;C:\Users\PC\AppData\Local\GitHubDesktop\bin;C:\Users\PC\AppData\Local\Programs\Microsoft VS Code\bin
+Check launcher:	C:\Program Files (x86)\Common Files\Oracle\Java\javapath\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\system32\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\Wbem\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\WindowsPowerShell\v1.0\bin\javaw.exe (not found)
+Check launcher:	C:\Windows\System32\OpenSSH\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\Git\cmd\bin\javaw.exe (not found)
+Check launcher:	C:\Users\PC\AppData\Local\Microsoft\WindowsApps\bin\javaw.exe (not found)
+Check launcher:	C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin\javaw.exe (not found)
+Check launcher:	C:\Users\PC\AppData\Local\GitHubDesktop\bin\javaw.exe (not found)
+Check launcher:	C:\Users\PC\AppData\Local\Programs\Microsoft VS Code\bin\javaw.exe (not found)
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Version string: 1.008.000 / 32-Bit (OK)
+Check launcher:	C:\Program Files (x86)\Java\jre-1.8\bin\javaw.exe (OK)
+Match:		1.008.000
+Runtime used:	1.008.000 (32-bit)
+Launcher:	C:\Program Files (x86)\Java\jre-1.8\bin\javaw.exe
+Launcher args:	-jar "C:\Users\PC\Documents\GitHub\API-2\App.exe"
+Args length:	49/32768 chars
+Exit code:	0

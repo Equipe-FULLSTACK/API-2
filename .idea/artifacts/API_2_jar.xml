@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="API-2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/API_2_jar</output-path>
+    <root id="archive" name="API-2.jar">
+      <element id="module-output" name="API-2" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/h2-2.1.214.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/flatlaf-3.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/jfreechart-1.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/jcommon-1.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/jcalendar-1.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

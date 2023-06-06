@@ -8002,3 +8002,6 @@ UPDATE alunos_tarefas SET data_entrega = '10/05/2023', nota =  , comentarios = '
 2023-05-10 07:30:12 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE alunos_tarefas SET data_entrega = '10/05/2023', nota =  [*], comentarios = ' ' WHERE id_tarefa =  (SELECT id FROM tarefas WHERE nome = 'Avaliacao 3' AND data_entrega = '24/05/2023') AND nome = 'Pedro';"; expected "DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
 UPDATE alunos_tarefas SET data_entrega = '10/05/2023', nota =  , comentarios = ' ' WHERE id_tarefa =  (SELECT id FROM tarefas WHERE nome = 'Avaliacao 3' AND data_entrega = '24/05/2023') AND nome = 'Pedro'; [42001-214]
+2023-06-05 21:55:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE alunos_tarefas SET data_entrega = '05/06/2023', nota =  [*], comentarios = ' ' WHERE id_tarefa =  (SELECT id FROM tarefas WHERE nome = 'Apresentação' AND data_entrega = '06/06/2023') AND nome = 'Leonardo';"; expected "DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+UPDATE alunos_tarefas SET data_entrega = '05/06/2023', nota =  , comentarios = ' ' WHERE id_tarefa =  (SELECT id FROM tarefas WHERE nome = 'Apresentação' AND data_entrega = '06/06/2023') AND nome = 'Leonardo'; [42001-214]

@@ -43,7 +43,7 @@ Equipe FULLSTACK - API 2º Semestre
   
   <br>
 
-### <p align = "center">![image](https://github.com/Equipe-FULLSTACK/API-2/blob/Sprint3/readme/Grafico_Burndown_Sprint4.png)
+### <p align = "center">![image](https://github.com/Equipe-FULLSTACK/API-2/blob/Sprint4/readme/Grafico_Burndown_Sprint4.png)
   
   <br>
   <br>

@@ -28,11 +28,17 @@ Equipe FULLSTACK - API 2º Semestre
   
   <br>
   <br>
-  #### Criação do arquivo executavel
+  
+### <div align="center"> Criação do arquivo executavel
+  
   <br>
   <br>
+  
   A criação do arquivo executavel foi feita utilizando a biblioteca Launch4J, onde, a partir de um arquivo Jar originado pelo projeto, é possivel realizar a conversão para um aplicativo de extensão .exe
+  
   <br>
+  <br>
+  
   <div align="center"> <img src="/readme/Launch4J.png "width="640" height="360"> </div>
   
 ### <p align = "center">Gráfico de Burndown
